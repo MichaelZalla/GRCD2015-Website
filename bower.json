@@ -1,0 +1,29 @@
+{
+  "name": "daapworks-frontend",
+  "version": "0.0.1",
+  "description": "Prototyping for the DAAPworks #grcd2015 senior exhibit site.",
+  "keywords": [ ],
+  "authors": [
+    "Michael Zalla"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/MichaelZalla/daapworks-frontend",
+  "main": "src/scss/main.scss",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "jquery-waypoints": "~2.0.5",
+    "foundation": "~5.4.7",
+    "ScrollIt": "*"
+  },
+  "resolutions": {
+    "jquery": "~2.1.1"
+  }
+}
