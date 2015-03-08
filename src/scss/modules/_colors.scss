@@ -6,8 +6,9 @@
  * Contains information about color variables used in partial files.
  */
 
-$color-type-default: rgb(67,74,84);
-$color-anchor-default: rgb(0,136,204);
+$color-type-default: 	lighten(black, 22);
+$color-anchor-default: 	rgba(black, 0.40);
+$color-anchor-hover: 	rgba(black, 0.65);
 
 $color-gray-1: rgb(255, 255, 255);
 $color-gray-2: rgb(245, 247, 250);

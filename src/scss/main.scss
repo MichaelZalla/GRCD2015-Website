@@ -26,7 +26,6 @@
 
 /* Mixins */
 
-// @import "burger";
 @import "modules/mixins/SassMixins/bundle";
 @import "modules/mixins/placeholderText";
 @import "modules/mixins/hamburger";
@@ -42,5 +41,4 @@
 
 /* View Partials */
 
-@import "partials/views/guidelines";
 @import "partials/views/landing";

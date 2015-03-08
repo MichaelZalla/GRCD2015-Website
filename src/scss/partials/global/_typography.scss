@@ -9,19 +9,18 @@
 
 /* Typographic layout attributes */
 
-$ss-type-mobile-base-point-size: 18px;
+$ss-type-mobile-base-point-size: 14.5px;
 $ss-type-desktop-base-point-size: 16px;
 $ss-type-base-line-height: 1;
 
 $ss-type-copy-point-size: 1.15rem;
-
-$ss-type-default-font-family: "Chaparral Pro";
+$ss-type-default-font-family: "Proxima Nova";
 
 /* Typographic placeholder selectors */
 
 %copy {
 	margin-top: $ss-type-copy-point-size * 1.5;
-	@include typeset($ss-type-copy-point-size, 1.65, -0.0075em,
+	@include typeset($ss-type-copy-point-size, 1.5, 0.0em,
 		$ss-type-default-font-family);
 }
 
@@ -38,7 +37,7 @@ $ss-type-default-font-family: "Chaparral Pro";
 
 /* Base typographic styles */
 
-html {
+html, body {
 
 	letter-spacing: 0.0em;
 	font-weight: $font-weight-regular;
@@ -69,11 +68,28 @@ p, span, a, .copy {
 	}
 }
 
+p a,
+span a,
+.copy a { display: inline; }
+
 /* Hyperlinks */
 
 a, a:link, a:visited, a:hover, a:active {
-	text-decoration: none;
 	color: $color-anchor-default;
+	text-decoration: none;
+	@include vendorize(transition, color 0.35s ease-in-out);
+	// text-decoration: underline;
+	// @include vendorize(text-decoration-color, rgba(0,0,0,0.12));
+}
+
+a span {
+	// border-bottom: 1px solid rgba(black,0.12);
+	// @include vendorize(transition, border-color 0.35s ease-in-out);
+}
+
+a:hover {
+	color: $color-anchor-hover;
+	span { border-color: rgba(black, 0.24); }
 }
 
 a:focus { @include vendorize(outline, none); }
