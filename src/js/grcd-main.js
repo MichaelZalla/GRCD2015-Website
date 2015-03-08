@@ -10,7 +10,7 @@
 
 		// ScrollIt
 		$.scrollIt({
-			easing: 'linear',
+			easing: 'swing',
 			scrollTime: 500,
 			activeClass: 'active',
 			topOffset: -68
@@ -26,8 +26,8 @@
 			var o = logo.offset();
 
 			grid.css({
-				'left': o.left - 242,
-				'top': o.top - 187
+				'left': o.left - 240,
+				'top': o.top - 190
 			});
 
 		}

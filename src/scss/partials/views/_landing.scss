@@ -107,14 +107,15 @@
 			top: 0;
 			left: 0;
 			display: block;
-			width: 1420px;
+			width: 1484px;
 			height: 450px;
 
 			@include background("../images/letter-grid_2x.png", cover);
+			@include vendorize(transform, translatez(0));
 
 		}
 
-		#logo { margin-top: 140px; }
+		#logo { margin-top: 96px; }
 
 		.arrow-down { display: none; }
 
