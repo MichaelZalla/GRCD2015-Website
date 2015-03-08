@@ -1,0 +1,86 @@
+#landing {
+
+	.row { width: auto !important; }
+
+	p { max-width: 420px; }
+
+	span.label { display: block; }
+
+	section#info {
+		.branding { max-width: 320px; }
+		.schedule li:not(:first-child) span { display: inline; }
+	}
+
+	section#print,
+	section#interaction,
+	section#motion {
+
+		.content {
+
+			width: 100%;
+			max-width: none;
+			@include same(margin-top, margin-bottom, padding, 0);
+
+			.column {
+				position: relative;
+				padding-top: 45px;
+				padding-bottom: 32px;
+				height: 100vh;
+			}
+
+			.column:nth-child(odd) { padding-left: 50px; }
+			.column:nth-child(even) { padding-right: 50px; }
+
+			.column .wrapper {
+				max-width: $ss-desktop-content-max-width / 2;
+				width: 100%;
+			}
+
+			.column:nth-child(odd) .wrapper { margin-left: auto; }
+
+			.column:nth-child(odd) .branding {
+				position: absolute;
+				top: 45px;
+				left: 50px;
+			}
+
+		}	
+	
+		.preview {
+			
+			.branding { max-width: 320px; }
+
+			.attribution:before { content: "by\00a0"; }
+
+		}
+		
+		.gallery {
+
+			padding-left: 2.5em;
+			background-color: $color-gray-2;
+
+			@include vendorize(transition, background-color 0.16s ease-in-out);
+			
+			.student {
+
+				$student-size: 84px;
+
+				display: inline-block;
+				overflow: hidden;
+				border-radius: $student-size / 2;
+				background-color: $color-gray-2;
+
+				@include same(width, height, $student-size);
+				@include same(margin-top, margin-right, 1.5em);
+
+			}
+
+		}
+
+	}
+
+	section#print 		.gallery:hover { background-color: $grcd-neon-pink; }
+	section#interaction .gallery:hover { background-color: $grcd-neon-green; }
+	section#motion 		.gallery:hover { background-color: $grcd-neon-blue; }
+
+}

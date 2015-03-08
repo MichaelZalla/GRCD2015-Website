@@ -13,15 +13,16 @@ $ss-type-mobile-base-point-size: 18px;
 $ss-type-desktop-base-point-size: 16px;
 $ss-type-base-line-height: 1;
 
-$ss-type-copy-point-size: 1.00rem;
+$ss-type-copy-point-size: 1.15rem;
 
-$ss-type-default-font-family: "Open Sans";
+$ss-type-default-font-family: "Chaparral Pro";
 
 /* Typographic placeholder selectors */
 
 %copy {
 	margin-top: $ss-type-copy-point-size * 1.5;
-	@include typeset($ss-type-copy-point-size, 1.65, 0.0em, $ss-type-default-font-family);
+	@include typeset($ss-type-copy-point-size, 1.65, -0.0075em,
+		$ss-type-default-font-family);
 }
 
 %hide-text {
@@ -79,36 +80,53 @@ a:focus { @include vendorize(outline, none); }
 
 /* Display type */
 
-h1, h2, h3, h4, h5, h6 {
-	&, &:before, &:after {
-		@extend %copy;
-		line-height: 1.35;
-		font-weight: $font-weight-light;
-	}
-}
+// h1, h2, h3, h4, h5, h6 {
+// 	&, &:before, &:after {
+// 		margin-top: $ss-type-copy-point-size * 1.5;
+// 		@include typeset($ss-type-copy-point-size, 1.65, 0.0em, $ss-type-default-font-family);
+// 		line-height: 1.35;
+// 		font-weight: $font-weight-light;
+// 	}
+// }
 
-h1, h1:before, h1:after { @include same(font-size, margin-top, 2.44rem); }
-h2, h2:before, h2:after { @include same(font-size, margin-top, 2.15rem); }
-h3, h3:before, h3:after { @include same(font-size, margin-top, 1.84rem); }
-h4, h4:before, h4:after { @include same(font-size, margin-top, 1.40rem); }
-h5, h5:before, h5:after { @include same(font-size, margin-top, 1.00rem); }
-h6, h6:before, h6:after { @include same(font-size, margin-top, 0.84rem); }
+// h1, h1:before, h1:after { @include same(font-size, margin-top, 2.75rem); }
+// h2, h2:before, h2:after { @include same(font-size, margin-top, 2.44rem); }
+// h3, h3:before, h3:after { @include same(font-size, margin-top, 1.84rem); }
+// h4, h4:before, h4:after { @include same(font-size, margin-top, 1.40rem); }
+// h5, h5:before, h5:after { @include same(font-size, margin-top, 1.00rem); }
+// h6, h6:before, h6:after { @include same(font-size, margin-top, 0.84rem); }
 
-h4, h4:before, h4:after {
-	font-weight: $font-weight-semibold;
-}
+// h4, h4:before, h4:after {
+// 	font-weight: $font-weight-semibold;
+// }
 
-h5, h5:before, h5:after {
-	letter-spacing: 0.065em;
-	font-weight: $font-weight-bold;
+// h5, h5:before, h5:after {
+// 	letter-spacing: 0.065em;
+// 	font-weight: $font-weight-bold;
+// 	text-transform: uppercase;
+// }
+
+// h6, h6:before, h6:after {
+// 	letter-spacing: 0.115em;
+// 	font-weight: $font-weight-bold;
+// 	text-transform: uppercase;
+// }
+
+/* Primary heading (Brandon Grotesque) */
+
+h1 { &, &:before, &:after {
+	margin-top: 2.05em;
+	@include typeset(2.05rem, 1.15, 0.75em, "Brandon Grotesque", $font-weight-bold);
 	text-transform: uppercase;
-}
+} }
 
-h6, h6:before, h6:after {
-	letter-spacing: 0.115em;
-	font-weight: $font-weight-bold;
-	text-transform: uppercase;
-}
+/* Secondary heading (Proxima Nova) */
+
+h2 { &, &:before, &:after {
+	margin-top: 1.50em;
+	@include typeset(1.50rem, 1.24, 0.024em, "Proxima Nova", $font-weight-semibold);
+	color: rgba(black, 0.4);
+} }
 
 /* Headings and Subheadings */
 
@@ -146,11 +164,9 @@ h6, h6:before, h6:after {
 .label,
 .label:before,
 .label:after {
-	margin-top: 0.67rem;
+	margin-top: 0.76rem;
 	text-transform: uppercase;
-	@include typeset(0.8rem, 1.5, 0.125em,
-		$ss-type-default-font-family,
-		$font-weight-semibold);
+	@include typeset(0.76rem, 1.15, 0.035em, "Proxima Nova", $font-weight-bold);
 }
 
 /* Callouts */
@@ -159,7 +175,7 @@ h6, h6:before, h6:after {
 .callout:before,
 .callout:after {
 	display: block;
-	font-size: 1.65rem;
+	font-size: 1.68rem;
 	font-weight: $font-weight-light;
 	line-height: 1.2;
 }

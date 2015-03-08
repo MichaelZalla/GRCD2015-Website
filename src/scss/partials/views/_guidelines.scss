@@ -1,0 +1,75 @@
+#guidelines section {
+
+	.content {
+		display: block;
+		@include same(padding-top, padding-bottom, 1px);
+	}
+
+	.column { @include same(padding-left, padding-right, 0em); }
+
+	p { max-width: 550px; }
+
+	.searching {
+		
+		li, h1 { display: inline-block; }
+
+	}
+
+	.palette {
+		
+		.swatch {
+
+			$swatch-size: 164px;
+
+			display: inline-block;
+			padding: 1em;
+			width: $swatch-size;
+			background-color: $color-gray-2;
+
+			@include same(margin-top, margin-right, 1.5em);
+
+			.label { display: block; }
+
+			.label:not(:first-child) {
+				margin-top: 0.5em;
+				font-weight: $font-weight-regular;
+			}
+
+			&:before {
+				display: inline-block;
+				margin: -1em -1em 0;
+				content: "";
+				@include same(width, height, $swatch-size);
+			}
+
+			&.neon-yellow:before { background-color: $grcd-neon-yellow; }
+			&.neon-pink:before  { background-color: $grcd-neon-pink; }
+			&.neon-blue:before  { background-color: $grcd-neon-blue; }
+			&.neon-green:before { background-color: $grcd-neon-green; }
+		
+		}
+
+	}
+
+	.typefaces {
+
+		.specimen {
+
+			font-size: 1.84rem;
+			font-weight: $font-weight-regular;
+			text-transform: capitalize;
+
+			&:after {
+				display: block;
+				content: "ABCDEFGHIJKLMNOPQRSTUVWXYZ \000a abcdefghijklmnopqrstuvwxyz";
+			}
+
+			&.brandon-grotesque { span, &:after { font-family: "Brandon Grotesque"; }}
+			&.proxima-nova 		{ span, &:after { font-family: "Proxima Nova"; }}
+			&.chaparral-pro 	{ span, &:after { font-family: "Chaparral Pro"; }}
+
+		}
+
+	}
+
+}

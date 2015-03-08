@@ -6,8 +6,8 @@
 	<meta charset="utf-8">
 	
 	<!-- Content metadata -->
-	<title>Startup Sass</title>
-	<meta name="description" content="Small, responsive scaffolding designed to accelerate your web project">
+	<title>GRCD 2015</title>
+	<meta name="description" content="Prototyping for the DAAPworks #grcd2015 senior exhibit site.">
 	<meta name="author" content="Michael Zalla (https://github.com/MichaelZalla)">
 	
 	<!-- Behavioral metadata -->
@@ -21,109 +21,193 @@
 	<link rel="icon" type="image/png" href="/favicon-16.png?v=0.0.1" sizes="16x16" />
 	
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="/css/startup-sass.min.css?v=0.0.1">
+	<link rel="stylesheet" href="/css/grcd.min.css?v=0.0.1">
 
 </head>
-<body>
+<body id="landing">
 			
-	<!-- Site header -->
-	<header id="header" class="fixed dark">
+	<section id="info" class="fullscreen">
 		<div class="container">
 			<div class="content">
 
-				<!-- Branding -->
-				<div class="left">
-					<a href="#" id="logo">
-						<span class="label">Startup Sass</span>
-						<span class="label" style="letter-spacing:0.035em;">v&nbsp;0.0.1</span>
-					</a>
+				<div class="row align-bottom">
+					
+					<!-- Event branding -->
+					<div class="column small-12 medium-6">
+						<img class="branding" src="images/grcd-2015-yellow.png" alt="GRCD2015">
+					</div>
+
+					<!-- Attendance information -->
+					<div class="column small-12 medium-6">
+
+						<h2>Graphic Communication Design&mdash;Class of 2015</h2>
+						
+						<span>As part of the Spring DAAPworks exhibit.</span>
+						
+						<span class="address">
+							DAAP Aronoff Building<br>
+							2624 Clifton Avenue<br>
+							Cincinnati, OH 45219
+						</span>
+
+						<ul class="schedule">
+							<li><span class="date-time">April 22 (5pm&ndash;9pm)</span></li>
+							<li><span class="date-time">April 23&ndash;25 (9am&ndash;9pm)</span></li>
+							<li><span class="date-time">April 26 (10am&ndash;1pm)</span></li>
+						</ul>
+						
+						<span class="notice">Free admission and refreshments.</span>
+
+					</div>
 				</div>
-
-				<!-- Responsive navigation menu -->
-				<div class="right">
-					<section class="ss-header-navigation fullscreen">
-						<div class="container">
-							<div class="content dark">
-								<ul>
-									<li><a href="#"><span class="label">About&ensp;Us</span></a></li>
-									<li><a href="#"><span class="label">F.A.Q.</span></a></li>
-									<li><a href="#"><span class="label">Blog</span></a></li>
-									<li><a href="#"><span class="label">Connect</span></a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
-					<div class="ss-header-navigation-toggle"></div>
-				</div>
-
-			</div>
-		</div>
-		<div class="indicator"></div>
-	</header>
-
-	<!-- Content section -->
-	<section id="section1" class="fullscreen">
-		<div class="container">
-			<div class="content">
-
-				<h1 class="center" style="margin:0;">Welcome to Startup Sass.</h1>
-				<span class="center" style="opacity:0.35;">Now make something <i>awesome</i>&hellip;&nbsp;</span>
 
 			</div>
 		</div>
 	</section>
 
-	<!-- Site footer -->
-	<footer id="footer">
+	<section id="print" class="fullscreen">
 		<div class="container">
 			<div class="content">
-				<div class="row">
 
-					<!-- Branding -->
-					<div class="column small-12 medium-4 ss-footer-branding"><a href="#"></a></div>
+				<div class="row align-bottom">
 
-					<!-- Navigation -->
-					<div class="column small-12 medium-8 large-6 ss-footer-navigation">
-						<div class="row">							
-							<div class="column small-12 medium-4">
-								<span class="label">About</span><ul>
-									<li><a href="#">Our Story</a></li>
-									<li><a href="#">The Blog</a></li>
-									<li><a href="#">Careers</a></li>
-								</ul>
-							</div>
-							<div class="column small-12 medium-4">
-								<span class="label">Product</span><ul>
-									<li><a href="#">Overview</a></li>
-									<li><a href="#">Features</a></li>
-									<li><a href="#">Pricing</a></li>
-								</ul>
-							</div>							
-							<div class="column small-12 medium-4">
-								<span class="label">Resources</span><ul>
-									<li><a href="#">Help</a></li>
-									<li><a href="#">Terms &amp; Privacy</a></li>
-									<li><a href="#">Contact Us</a></li>
-								</ul>
-							</div>							
+					<!-- Project preview -->
+					<div class="preview column small-12 medium-6">
+						<!-- Print branding (default) -->
+						<img class="branding" src="images/grcd-2015-pink.png" alt="GRCD2015">
+						<div class="wrapper">
+							<h2 class="project-title">A Cool Project Title</h2>
+							<span class="label attribution">Billy the Kid</span>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+						</div>
+					</div>
+					
+					<!-- Student gallery -->
+					<div class="gallery column small-12 medium-6">
+						<div class="wrapper">
+							
+							<ul class="students">
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+							</ul>
+
 						</div>
 					</div>
 
-					<!-- Social -->
-					<!--
-					<div class="column small-12 medium-2 ss-footer-social">
-						<ul>
-							<li><a href="#" class="facebook" alt="Facebook"><p>Facebook</p></a></li>
-							<li><a href="#" class="twitter" alt="Twitter"><p>Twitter</p></a></li>
-							<li><a href="#" class="instagram" alt="Instagram"><p>Instagram</p></a></li>
-						</ul>
-					</div>
-					-->
-
 				</div>
+
 			</div>
 		</div>
-	</footer>
+	</section>
+
+	<section id="interaction" class="fullscreen">
+		<div class="container">
+			<div class="content">
+
+				<div class="row align-bottom">
+
+					<!-- Project preview -->
+					<div class="preview column small-12 medium-6">
+						<!-- Print branding (default) -->
+						<img class="branding" src="images/grcd-2015-green.png" alt="GRCD2015">
+						<div class="wrapper">
+							<h2 class="project-title">A Cool Project Title</h2>
+							<span class="label attribution">Billy the Kid</span>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+						</div>
+					</div>
+					
+					<!-- Student gallery -->
+					<div class="gallery column small-12 medium-6">
+						<div class="wrapper">
+							
+							<ul class="students">
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+							</ul>
+
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section id="motion" class="fullscreen">
+		<div class="container">
+			<div class="content">
+
+				<div class="row align-bottom">
+
+					<!-- Project preview -->
+					<div class="preview column small-12 medium-6">
+						<!-- Print branding (default) -->
+						<img class="branding" src="images/grcd-2015-blue.png" alt="GRCD2015">
+						<div class="wrapper">
+							<h2 class="project-title">A Cool Project Title</h2>
+							<span class="label attribution">Billy the Kid</span>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+						</div>
+					</div>
+					
+					<!-- Student gallery -->
+					<div class="gallery column small-12 medium-6">
+						<div class="wrapper">
+							
+							<ul class="students">
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+								<li class="student"><img src="images/avatar-88x88_2x.png" alt="firstName lastName" width="88" height="88"></li>
+							</ul>
+
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</section>
 
 	<!-- LiveReload with grunt-contrib-watch (remove in production) -->
 	<script src="//localhost:35729/livereload.js"></script>
