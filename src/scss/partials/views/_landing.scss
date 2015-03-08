@@ -22,12 +22,6 @@
 
 		}
 
-		#logo {
-			margin-left: -19px;
-			// width: 100%;
-			max-width: 275px;
-		}
-
 	}
 
 	section#info {
@@ -36,6 +30,8 @@
 			padding-top: 22px;
 			padding-bottom: 8px;
 		}
+
+		.column { margin-top: 2.0em; }
 
 		h1 {
 			display: inline-block;
@@ -48,14 +44,13 @@
 
 		.heading {
 			margin-top: 0.18rem;
-			@include typeset(1.15rem, 1.8, 0.125em,
+			@include typeset(1.35rem, 1.55, 0.125em,
 				$ss-type-default-font-family, $font-weight-bold);
 		}
 
 		.notice {
 			font-style: italic;
 			text-transform: capitalize;
-			color: #999;
 		}
 
 		.schedule li:first-child span { margin-top: 0; }
@@ -120,7 +115,11 @@
 
 		}
 
-		#logo { margin-top: 96px; }
+		#logo {
+			margin-top: 96px;
+			margin-left: -19px;
+			max-width: 275px;
+		}
 
 		.arrow-down { display: none; }
 
