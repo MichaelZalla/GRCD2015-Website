@@ -37,8 +37,6 @@
 			padding-bottom: 8px;
 		}
 
-		.column > span:first-child { margin-top: 0; }
-
 		h1 {
 			display: inline-block;
 			margin-left: -1 * $highlight-indent;
@@ -61,7 +59,7 @@
 		}
 
 		.schedule li:first-child span { margin-top: 0; }
-		.schedule li:not(:first-child) { margin-top: 3px; }
+		.schedule li:not(:first-child) { margin-top: 8px; }
 		.schedule li:not(:first-child) span { display: inline; }
 
 		.date-time,
@@ -105,6 +103,8 @@
 	section#branding {
 
 		.content { overflow: hidden; }
+
+		.column > *:first-child { margin-top: 2.0; }
 
 		.letter-grid {
 			
