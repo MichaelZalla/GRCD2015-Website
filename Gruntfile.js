@@ -103,8 +103,8 @@ module.exports = function(grunt) {
 				quiet: true
 			},
 			dist: { files: {
-				// startup-sass.min.css
-				'dist/css/startup-sass.min.css': 'src/scss/main.scss'
+				// grcd.min.css
+				'dist/css/grcd.min.css': 'src/scss/main.scss'
 			}}
 		},
 
