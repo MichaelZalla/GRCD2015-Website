@@ -37,6 +37,8 @@
 			padding-bottom: 8px;
 		}
 
+		.column > span:first-child { margin-top: 0; }
+
 		h1 {
 			display: inline-block;
 			margin-left: -1 * $highlight-indent;
@@ -47,7 +49,8 @@
 		}
 
 		.heading {
-			@include typeset(1.35rem, 1.35, 0.125em,
+			margin-top: 0.18rem;
+			@include typeset(1.15rem, 1.8, 0.125em,
 				$ss-type-default-font-family, $font-weight-bold);
 		}
 
@@ -67,6 +70,8 @@
 			&, span { font-weight: $font-weight-semibold; }
 			span { display: inline; }
 		}
+
+		.address span { line-height: 1.8; }
 
 	}
 
@@ -118,6 +123,12 @@
 		#logo { margin-top: 96px; }
 
 		.arrow-down { display: none; }
+
+	}
+
+	section#info {
+
+		h1 { display: none; }
 
 	}
 
