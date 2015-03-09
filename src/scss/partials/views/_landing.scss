@@ -3,24 +3,8 @@
 	$highlight-indent: 14px;
 
 	section#branding {
-		
-		// position: relative;
 
-		.arrow-down {
-			
-			position: absolute;
-			display: block;
-			bottom: 2em;
-			width: 100vw;
-			
-			margin: 0 auto;
-			max-width: none;
-			height: 44px;
-			border-radius: 0;
-
-			@include background("../images/arrow-down_2x.png", 44px auto, center center);
-
-		}
+		#logo { max-width: 275px; }
 
 	}
 
@@ -32,6 +16,8 @@
 		}
 
 		.column { margin-top: 2.0em; }
+
+		.column > div { overflow: hidden; }
 
 		h1 {
 			display: inline-block;
@@ -83,6 +69,32 @@
 		.container { display: table-cell; vertical-align: middle; }
 		.content { display: table; }
 
+		.column { text-align: center; }
+
+		#logo {
+			padding-left: 0.35em;
+			max-width: 78vw;
+			max-height: 75vh;
+		}
+
+		.arrow-down {
+			
+			position: absolute;
+			display: block;
+			bottom: 1em;
+			width: 100vw;
+			
+			margin: 0 auto;
+			max-width: none;
+			height: 36px;
+			border-radius: 0;
+
+			@include background("../images/arrow-down_2x.png", 36px auto, center center);
+
+			&:hover { background-color: transparent; }
+
+		}
+
 	}
 
 	section#info { min-height: 100vh; }
@@ -118,10 +130,7 @@
 		#logo {
 			margin-top: 96px;
 			margin-left: -19px;
-			max-width: 275px;
 		}
-
-		.arrow-down { display: none; }
 
 	}
 
