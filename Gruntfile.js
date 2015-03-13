@@ -92,6 +92,11 @@ module.exports = function(grunt) {
 				// jquery-scrollIt.min.js
 				'dist/js/vendor/jquery/plugins/jquery-scrollIt.min.js':
 					['bower_components/ScrollIt/scrollIt.min.js']
+			}},
+			buggyfill: { files: {
+				// viewport-units-buggyfill.js
+				'dist/js/vendor/buggyfill/viewport-units-buggyfill.js':
+					['bower_components/viewport-units-buggyfill/viewport-units-buggyfill.js']
 			}}
 		},
 

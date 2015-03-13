@@ -11,23 +11,25 @@
 		// ScrollIt
 		$.scrollIt({
 			easing: 'swing',
-			scrollTime: 500,
-			activeClass: 'active',
-			topOffset: -68
+			scrollTime: 1095,
+			activeClass: 'active'
+			// ,topOffset: -68
 		});
 
 		// Letter-grid (dynamic position)
 
-		var logo = $('#logo');
-		var grid = $('section#branding').find('.letter-grid');
+		var logo = $('#branding').find('.logo');
+		var grid = $('#branding').find('.letter-grid');
 
 		function onResizeWindow(e) {
 
 			var o = logo.offset();
 
 			grid.css({
-				'left': o.left - 240,
-				'top': o.top - 190
+				'left': o.left - 274,
+				'top': o.top - 210
+				// 'left': o.left - 220,
+				// 'top': o.top - 240
 			});
 
 		}

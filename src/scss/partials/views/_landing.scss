@@ -1,27 +1,24 @@
-#landing {
+$highlight-indent: 14px;
 
-	$highlight-indent: 14px;
+#landing {
 
 	section#branding {
 
-		#logo { max-width: 275px; }
+		.logo { max-width: 275px; }
 
 	}
 
 	section#info {
 		
-		.content {
-			padding-top: 22px;
-			padding-bottom: 8px;
-		}
+		.content { padding-bottom: 16px; }
 
-		.column { margin-top: 2.0em; }
+		.column { margin-top: 2.65em; }
 
-		.column > div { overflow: hidden; }
+		// Pull back the highlight wrappers
+		.column > div { margin-left: -1 * $highlight-indent; }
 
 		h1 {
-			display: inline-block;
-			margin-left: -1 * $highlight-indent;
+			display: inline-block; // for highlight (background) rendering
 			padding: 3px 2px 0 14px;
 			letter-spacing: 0.45em;
 			@include same (font-size, margin-top, 1.72rem);
@@ -30,8 +27,15 @@
 
 		.heading {
 			margin-top: 0.18rem;
-			@include typeset(1.35rem, 1.55, 0.125em,
+			@include typeset(1.24rem, 1.55, 0.055em,
 				$ss-type-default-font-family, $font-weight-bold);
+		}
+
+		// @TODO Replace arbitrary typographic styles with semantic classes
+		.column:first-child,
+		.schedule,
+		.address {
+			span:first-child { font-weight: $font-weight-semibold; }
 		}
 
 		.notice {
@@ -39,14 +43,14 @@
 			text-transform: capitalize;
 		}
 
-		.schedule li:first-child span { margin-top: 0; }
-		.schedule li:not(:first-child) { margin-top: 8px; }
-		.schedule li:not(:first-child) span { display: inline; }
+		.schedule li {
+			span { display: block; margin-top: 0.5em; }
+			&:first-child span { margin-top: 0; }
+		}
 
 		.date-time,
 		.address {
 			margin-top: 0;
-			&, span { font-weight: $font-weight-semibold; }
 			span { display: inline; }
 		}
 
@@ -64,14 +68,15 @@
 
 		display: table;
 		width: 100%;
-		height: 100vh;
+		@include same(height, max-height, 100vh);
 
 		.container { display: table-cell; vertical-align: middle; }
 		.content { display: table; }
 
 		.column { text-align: center; }
 
-		#logo {
+		.logo {
+			margin-top: 3.0em;
 			padding-left: 0.35em;
 			max-width: 78vw;
 			max-height: 75vh;
@@ -79,6 +84,8 @@
 
 		.arrow-down {
 			
+			$arrow-size: 8.75vw;
+
 			position: absolute;
 			display: block;
 			bottom: 1em;
@@ -86,24 +93,40 @@
 			
 			margin: 0 auto;
 			max-width: none;
-			height: 36px;
+			height: $arrow-size;
 			border-radius: 0;
 
-			@include background("../images/arrow-down_2x.png", 36px auto, center center);
+			@include background("../images/arrow-down_2x.png", $arrow-size auto, center center);
 
 			&:hover { background-color: transparent; }
+
+			@include vendorize(transition, opacity 0.35s ease-out);
+			
+			&.hidden,
+			&:focus { opacity: 0; }
 
 		}
 
 	}
 
-	section#info { min-height: 100vh; }
+	section#info {
+		
+		.content { margin-top: 24px; }
+		.column { margin-top: 1.15em; }
+
+	}
 
 }
 
 }
 
 @media #{ $medium-up } {
+
+// Prevents scrolling of letter-grid background
+html, body { 
+	width: 100vw;
+	overflow-x: hidden;
+}
 
 #landing {
 
@@ -122,12 +145,12 @@
 			width: 1484px;
 			height: 450px;
 
-			@include background("../images/letter-grid_2x.png", cover);
+			@include background("../images/letter-grid.svg", 95%);
 			@include vendorize(transform, translatez(0));
 
 		}
 
-		#logo {
+		.logo {
 			margin-top: 96px;
 			margin-left: -19px;
 		}

@@ -13,7 +13,8 @@
 	<!-- Behavioral metadata -->
 	<meta http-equiv="content-type" content="text/html;charset=utf-8">
 	<meta http-equiv="X-UI-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=device-dpi">
+	<!-- <meta name="viewport" content="minimum-scale=1, maximum-scale=1, width=device-width, target-densitydpi=device-dpi"> -->
 	
 	<!-- Favicons -->
 	<!--[if IE]><link rel="shortcut icon" href="favicon.ico?v=0.0.1" /><![endif]-->
@@ -33,21 +34,21 @@
 			<div class="content">
 				<div class="row">
 					<div class="column small-12 medium-4">
-						<img id="logo" src="images/letter-grid-title_2x.png" alt="Seek. Make. Find. GRCD 2015">
+						<img class="logo" src="images/letter-grid-title_2x.png" alt="Seek. Make. Find. GRCD 2015">
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section id="info">
+	<section id="info" data-scroll-index="1">
 		<div class="container">
 			<div class="content">
 				<div class="row ">
 					<div class="column small-12 medium-12 large-4">
-						<span data-scroll-index="1" style="margin-top:0;">University of Cincinnati</span>
-						<span class="heading" style="margin-bottom:-2px;">graphic communication<br>design exhibition</span>
-						<span>A part of <a href="http://daap.uc.edu/daapworks.html" target="_blank">DAAPworks</a>.</span>
+						<span style="margin-top:0;">University of Cincinnati</span>
+						<span class="heading" style="margin-bottom:-2px;max-width:280px;">graphic communication design exhibition</span>
+						<span>Part of the <a href="http://daap.uc.edu/daapworks.html" target="_blank">DAAPworks showcase</a>.</span>
 					</div>
 					<div class="column small-12 medium-6 large-4">
 						<div><h1>when</h1></div>
@@ -68,12 +69,17 @@
 			</div>
 		</div>
 	</section>
+	<div class="bottom-anchor"></div>
 
 	<!-- Dependencies -->
 	<script src="js/vendor/jquery/jquery.min.js"></script>
-	<script src="js/vendor/jquery/plugins/jquery-waypoints.min.js"></script>
+	<!--<script src="js/vendor/jquery/plugins/jquery-waypoints.min.js"></script>-->
 	<script src="js/vendor/jquery/plugins/jquery-scrollIt.min.js"></script>
 	<script src="js/grcd-main.js"></script>
+
+	<!-- Mobile Safari buggyfill -->
+	<script src="js/vendor/buggyfill/viewport-units-buggyfill.js"></script>
+	<script>viewportUnitsBuggyfill.init();</script>
 
 </body>
 
