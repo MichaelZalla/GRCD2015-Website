@@ -75,8 +75,12 @@ $highlight-indent: 14px;
 
 		.column { text-align: center; }
 
+<<<<<<< HEAD
 		.logo {
 			margin-top: 3.0em;
+=======
+		#logo {
+>>>>>>> 0e02574ed92062002e275ae44c38200a95c8c552
 			padding-left: 0.35em;
 			max-width: 78vw;
 			max-height: 75vh;
@@ -84,8 +88,11 @@ $highlight-indent: 14px;
 
 		.arrow-down {
 			
+<<<<<<< HEAD
 			$arrow-size: 8.75vw;
 
+=======
+>>>>>>> 0e02574ed92062002e275ae44c38200a95c8c552
 			position: absolute;
 			display: block;
 			bottom: 1em;
@@ -93,6 +100,7 @@ $highlight-indent: 14px;
 			
 			margin: 0 auto;
 			max-width: none;
+<<<<<<< HEAD
 			height: $arrow-size;
 			border-radius: 0;
 
@@ -105,6 +113,15 @@ $highlight-indent: 14px;
 			&.hidden,
 			&:focus { opacity: 0; }
 
+=======
+			height: 36px;
+			border-radius: 0;
+
+			@include background("../images/arrow-down_2x.png", 36px auto, center center);
+
+			&:hover { background-color: transparent; }
+
+>>>>>>> 0e02574ed92062002e275ae44c38200a95c8c552
 		}
 
 	}
