@@ -14,14 +14,19 @@ $ss-type-desktop-base-point-size: 14px;
 $ss-type-base-line-height: 1;
 
 $ss-type-copy-point-size: 1.15rem;
-$ss-type-default-font-family: "Proxima Nova";
+$ss-type-default-font-family: "Chaparral Pro";
 
 /* Typographic placeholder selectors */
 
 %copy {
-	margin-top: $ss-type-copy-point-size * 1.5;
+	margin-top: $ss-type-copy-point-size * 1.35;
 	@include typeset($ss-type-copy-point-size, 1.35, 0.015em,
 		$ss-type-default-font-family);
+}
+
+%underline {
+	padding-bottom: 2px;
+	border-bottom: 4px solid $grcd-neon-yellow;
 }
 
 %hide-text {
@@ -82,10 +87,11 @@ a, a:link, a:visited, a:hover, a:active {
 	// @include vendorize(text-decoration-color, rgba(0,0,0,0.14));
 }
 
+span {  overflow-y: visible; }
+
 span > a {
 	display: inline;
-	padding-bottom: 2px;
-	border-bottom: 5px solid $grcd-neon-yellow;
+	@extend %underline;
 	// border-bottom: 1px solid rgba(black,0.12);
 	// @include vendorize(transition, border-color 0.35s ease-in-out);
 }
@@ -131,15 +137,21 @@ a:focus { @include vendorize(outline, none); }
 // 	text-transform: uppercase;
 // }
 
-/* Primary heading (Brandon Grotesque) */
+/* Primary heading */
 
 h1 { &, &:before, &:after {
-	margin-top: 2.05em;
-	@include typeset(2.05rem, 1.15, 0.75em, "Brandon Grotesque", $font-weight-bold);
+	margin-top: 1.72em;
+	@include typeset(1.72rem, 1.15, 0.45em, "Brandon Grotesque", $font-weight-bold);
 	text-transform: uppercase;
 } }
 
-/* Secondary heading (Proxima Nova) */
+h1.highlight {
+	display: inline-block; // for highlight (background) rendering
+	padding: 3px 2px 0 14px;
+	@include background("../images/highlight-stroke-yellow_2x.png", 100% 66.67%, left top);
+}
+
+/* Secondary heading */
 
 h2 { &, &:before, &:after {
 	margin-top: 1.50em;
@@ -147,7 +159,7 @@ h2 { &, &:before, &:after {
 	color: rgba(black, 0.4);
 } }
 
-/* Headings and Subheadings */
+/* Headings and subheadings */
 
 .heading,
 .heading:before,
@@ -157,16 +169,14 @@ h2 { &, &:before, &:after {
 .subheading:after {
 	display: block;
 	text-transform: uppercase;
-	font-family: $ss-type-default-font-family;
+	font-family: "Proxima Nova";
 }
 
 .heading,
 .heading:before,
 .heading:after {
-	letter-spacing: 0.375em;
-	font-weight: $font-weight-light;
-	font-size: 1.85rem;
-	line-height: 2.5;
+	margin-top: 1.65em;
+	@include typeset(2.15rem, 1.15, 0.275em, "Brandon Grotesque", $font-weight-bold);
 }
 
 .subheading,
@@ -180,12 +190,23 @@ h2 { &, &:before, &:after {
 
 /* Labels */
 
+.label { margin-top: 0.96em; }
+
 .label,
 .label:before,
 .label:after {
-	margin-top: 0.76rem;
+	// margin-top: 0.96em;
 	text-transform: uppercase;
-	@include typeset(0.76rem, 1.15, 0.035em, "Proxima Nova", $font-weight-bold);
+	@include typeset(0.96rem, 1.15, 0.125em, "Proxima Nova", $font-weight-bold);
+}
+
+.label.large { margin-top: 1.24em; }
+
+.label.large,
+.label.large:before,
+.label.large:after {
+	line-height: 1.24;
+	font-size: 1.24rem;
 }
 
 /* Callouts */

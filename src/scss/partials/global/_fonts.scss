@@ -40,8 +40,8 @@
 
 /* Chaparral Pro (Normal) */
 
-// @include fontface("Chaparral Pro", "/fonts/ChaparralPro/ChaparralPro-Regular",
-// 	$font-weight-regular, normal);
+@include fontface("Chaparral Pro", "/fonts/ChaparralPro/ChaparralPro-Regular",
+	$font-weight-regular, normal);
 
 // @include fontface("Chaparral Pro", "/fonts/ChaparralPro/ChaparralPro-Semibold",
 // 	$font-weight-semibold, normal);
@@ -51,8 +51,8 @@
 
 /* Chaparral Pro (Italic) */
 
-// @include fontface("Chaparral Pro", "/fonts/ChaparralPro/ChaparralPro-RegularItalic",
-// 	$font-weight-regular, italic);
+@include fontface("Chaparral Pro", "/fonts/ChaparralPro/ChaparralPro-RegularItalic",
+	$font-weight-regular, italic);
 
 // @include fontface("Chaparral Pro", "/fonts/ChaparralPro/ChaparralPro-SemiboldItalic",
 // 	$font-weight-semibold, italic);

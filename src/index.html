@@ -27,6 +27,37 @@
 </head>
 <body id="landing">
 	
+	<!-- Site header -->
+	<header id="header" class="fixed">
+		<div class="container">
+			<div class="content">
+
+				<!-- Branding -->
+				<div class="left">
+					<a href="#" id="logo"></a>
+				</div>
+
+				<!-- Responsive navigation menu -->
+				<div class="right">
+					<section class="ss-header-navigation fullscreen">
+						<div class="container">
+							<div class="content">
+								<ul>
+									<li class="print"><a data-scroll-goto="2"><span class="label">print</span></a></li>
+									<li class="motion"><a data-scroll-goto="3"><span class="label">motion</span></a></li>
+									<li class="interaction"><a data-scroll-goto="4"><span class="label">interaction</span></a></li>
+									<li class="about"><a data-scroll-goto="1"><span class="label">about</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<div class="ss-header-navigation-toggle"></div>
+				</div>
+
+			</div>
+		</div>
+	</header>
+
 	<section id="branding">
 		<div class="letter-grid"></div>
 		<button class="arrow-down" data-scroll-goto="1"></button>
@@ -47,11 +78,11 @@
 				<div class="row ">
 					<div class="column small-12 medium-12 large-4">
 						<span style="margin-top:0;">University of Cincinnati</span>
-						<span class="heading" style="margin-bottom:-2px;max-width:280px;">graphic communication design exhibition</span>
+						<span class="label large" style="margin-bottom:-2px;max-width:280px;">graphic communication design exhibition</span>
 						<span>Part of the <a href="http://daap.uc.edu/daapworks.html" target="_blank">DAAPworks showcase</a>.</span>
 					</div>
 					<div class="column small-12 medium-6 large-4">
-						<div><h1>when</h1></div>
+						<div><h1 class="highlight">when</h1></div>
 						<ul class="schedule">
 							<li><span class="date-time">April 28 (5pm&ndash;9pm)</span></li>
 							<li><span class="date-time">April 29&ndash;May 1 (9am&ndash;9pm)</span></li>
@@ -60,7 +91,7 @@
 						<span class="notice">free admission &amp; refreshments</span>
 					</div>
 					<div class="column small-12 medium-6 large-4">
-						<div><h1>where</h1></div>
+						<div><h1 class="highlight">where</h1></div>
 						<a class="address" href="https://www.google.com/maps/place/DAAP+-+University+of+Cincinnati/@39.1329636,-84.5159585,17z/data=!4m6!1m3!3m2!1s0x8841b38acb65ec25:0x4249b42781c0c5fc!2sUniversity+of+Cincinnati!3m1!1s0x0000000000000000:0x3c92ee335c0058ba" target="_blank" style="margin-top:-4px;">
 							<span>DAAP Aronoff Building<br>2624 Clifton Avenue<br>Cincinnati, OH 45219</span>
 						</a>
@@ -69,13 +100,77 @@
 			</div>
 		</div>
 	</section>
-	<div class="bottom-anchor"></div>
+
+	<section id="promo" class="fullscreen"></section>
+
+	<!-- Print preview -->
+	<section class="project-preview" data-scroll-index="2">
+		<div class="container">
+			<div class="content">
+				<div class="row align-bottom">
+					<div class="preview-info column small-12 medium-5 large-4">
+						<span class="project-title heading">postshare project</span>
+						<span class="project-subtitle label">learn about sports, ya jabroni</span>
+						<span class="project-detail copy">Lorem ipdum klasjlkadj klhslk hey ovo squad a tuesday wat it dot haha.</span>
+						<ul class="project-students">
+							<li><span class="label large">elizabeth freeman</span></li>
+							<li><span class="label large">ayan daniels</span></li>
+						</ul>
+						<img class="project-headshot" src="images/headshot/abc.png">
+					</div>
+					<div class="preview-image column small-12 medium-7 large-8">
+						<a class="view-project" href="#"><span class="label">view project</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="project-select">
+		<div class="container">
+			<div class="content">
+				<div class="row">
+					<div class="column small-12 medium-12 large-3">
+						<span class="label large">print</span>
+					</div>
+					<div class="column small-12 medium-12 large-9">
+						<ul class="students-list">
+							<li class="student"><span class="copy"><a href="#" data-sixPlusTwo="abc">Ayan Daniels</a></span></li>
+							<li class="student"><span class="copy"><a href="#" data-sixPlusTwo="def">Loreali Jackson</a></span></li>
+							<li class="student"><span class="copy"><a href="#" data-sixPlusTwo="ghi">Aaron Hope</a></span></li>
+							<li class="student"><span class="copy"><a href="#" data-sixPlusTwo="abc">Alex Wheeler</a></span></li>
+							<li class="student"><span class="copy"><a href="#" data-sixPlusTwo="def">Arielle Giczkowski</a></span></li>
+							<li class="student"><span class="copy"><a href="#" data-sixPlusTwo="ghi">Brittany Newell</a></span></li>
+							<li class="student"><span class="copy"><a href="#" data-sixPlusTwo="abc">Catalina Florea</a></span></li>
+							<li class="student"><span class="copy"><a href="#" data-sixPlusTwo="def">Christina Coobatis</a></span></li>
+							<li class="student"><span class="copy"><a href="#" data-sixPlusTwo="ghi">Christopher Wells</a></span></li>
+							<li class="student"><span class="copy"><a href="#" data-sixPlusTwo="abc">Dane Mason</a></span></li>
+							<li class="student"><span class="copy"><a href="#" data-sixPlusTwo="def">Danielle Bradford</a></span></li>
+							<li class="student"><span class="copy"><a href="#" data-sixPlusTwo="ghi">Emily Rieger</a></span></li>
+							<li class="student"><span class="copy"><a href="#" data-sixPlusTwo="abc">Kelsey Sears</a></span></li>
+							<li class="student"><span class="copy"><a href="#" data-sixPlusTwo="def">Kerri Morabito</a></span></li>
+							<li class="student"><span class="copy"><a href="#" data-sixPlusTwo="ghi">Laura Yoder</a></span></li>
+							<li class="student"><span class="copy"><a href="#" data-sixPlusTwo="abc">Mallory Hartzler</a></span></li>
+							<li class="student"><span class="copy"><a href="#" data-sixPlusTwo="def">Mark Gierl</a></span></li>
+							<li class="student"><span class="copy"><a href="#" data-sixPlusTwo="ghi">Michael Zalla</a></span></li>
+							<li class="student"><span class="copy"><a href="#" data-sixPlusTwo="abc">Ryan Bahm</a></span></li>
+							<li class="student"><span class="copy"><a href="#" data-sixPlusTwo="def">Taylor Turnbull</a></span></li>
+							<li class="student"><span class="copy"><a href="#" data-sixPlusTwo="ghi">Alex Heflin</a></span></li>
+							<li class="student"><span class="copy"><a href="#" data-sixPlusTwo="abc">Michael Simpson</a></span></li>
+							<li class="student"><span class="copy"><a href="#" data-sixPlusTwo="def">Rachel Thieman</a></span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<!-- Dependencies -->
 	<script src="js/vendor/jquery/jquery.min.js"></script>
-	<!--<script src="js/vendor/jquery/plugins/jquery-waypoints.min.js"></script>-->
+	<script src="js/vendor/jquery/plugins/jquery-waypoints.min.js"></script>
 	<script src="js/vendor/jquery/plugins/jquery-scrollIt.min.js"></script>
 	<script src="js/grcd-main.js"></script>
+	<script src="js/preview-hover.js"></script>
 
 	<!-- Mobile Safari buggyfill -->
 	<script src="js/vendor/buggyfill/viewport-units-buggyfill.js"></script>

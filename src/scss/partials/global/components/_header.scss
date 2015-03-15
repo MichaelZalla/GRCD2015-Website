@@ -8,11 +8,14 @@
 
 /* Header styles */
 
+$logo-height: 26px;
+$logo-width: 136px;
+
 header {
 	
 	display: table;
 	width: 100%;
-	background-color: $color-spot-1;
+	background-color: white;
 	
 	@include vendorize("transition", background-color 0.125s ease-in);
 
@@ -39,29 +42,21 @@ header {
 	}
 
 	#logo {
-		
 		margin: 0 !important;
-		@include background("/images/logo-white.svg", auto 75%, left center);
-
-		.label {
-			color: white;
-			vertical-align: middle;
-			&:first-of-type { padding-left: 8px; }
-		}
-
+		padding-bottom: 4px;
+		@include background("/images/grcd-2015-title.png", $logo-width $logo-height, left top);
 	}
 
 	/* Responsive menu navigation */
 
 	.ss-header-navigation {
-		background-color: $color-spot-1;
+		
 		@include vendorize("transition", left 0.18s ease-in-out);
-		a, span { margin-top: 0; }
+
+		.label { font-size: 0.76rem; }
+		.label, a { margin-top: 0; }
+
 	}
-
-	/* Header interaction indicator */
-
-	.indicator { display: none; }
 
 }
 
@@ -81,10 +76,15 @@ header.fixed {
 
 header {
 
+	$content-height: $ss-mobile-header-height - (8px * 2);
+
 	height: $ss-mobile-header-height;
 
-	#logo { @include same(width, height, $ss-mobile-header-height - (8px * 2)); }
-	#logo .label { display: none; }
+	#logo {
+		padding-left: $content-height * 5.22; // maintain proportions
+		height: $content-height;
+		background-position-y: ($content-height / 2) - ($logo-height / 2);
+	}
 
 	/* Hamburger menu container */
 
@@ -101,6 +101,8 @@ header {
 		height: 100vh;
 		z-index: -1;
 
+		background-color: white;
+
 		.content {
 			margin: 0px auto !important;
 			width: 100vw !important;
@@ -108,18 +110,21 @@ header {
 		}
 
 		li {
+			
 			display: block;
 			padding-top: 28px;
 			padding-bottom: 28px;
+			
 			// Account for fixed page header
 			&:first-child { margin-top: $ss-mobile-header-height / 2; }
-			&:not(:last-child) { border-bottom: 1px solid white; }
+			&:not(:last-child) { border-bottom: 1px solid rgba(black, 0.08); }
+
 		}
 
-		a { color: white; }
+		a { color: rgba(black, 0.65); }
 
 		.label {
-			padding-left: 16px;
+			padding-left: 14px;
 			font-size: 1.35rem;
 		}
 
@@ -127,7 +132,7 @@ header {
 
 	/* Hamburger menu */
 
-	.ss-header-navigation-toggle { @include hamburger(30px, 3px, rgba(white, 0.65)); }
+	.ss-header-navigation-toggle { @include hamburger(30px, 3px, rgba(black, 0.18)); }
 	
 	.ss-header-navigation-toggle,
 	.ss-header-navigation-toggle:before,
@@ -139,7 +144,7 @@ header {
 		left: -100vw;
 		& ~ .ss-header-navigation-toggle,
 		& ~ .ss-header-navigation-toggle:before,
-		& ~ .ss-header-navigation-toggle:after { background-color: white; }
+		& ~ .ss-header-navigation-toggle:after { background-color: rgba(black, 0.35); }
 	}
 
 }
@@ -152,7 +157,7 @@ header {
 
 header {
 
-	#logo .label { display: none; }
+	
 
 }
 
@@ -168,11 +173,14 @@ header {
 
 	height: $ss-desktop-header-height;
 
-	#logo { @include same(padding-left, height, $content-height); }
-	#logo .label { margin-top: 15px; }
+	#logo {
+		padding-left: $content-height * 5.22; // maintain proportion
+		height: $content-height;
+		background-position-y: ($content-height / 2) - ($logo-height / 2);
+	}
 
 	.ss-header-navigation-toggle { display: none; }
-	.ss-header-navigation { margin-top: 6px; }
+	.ss-header-navigation { margin-top: 30px; }
 	.ss-header-navigation .content {
 
 		margin: 0;
@@ -181,54 +189,26 @@ header {
 		li {
 			
 			display: inline-block;
-			padding: 3px 20px 5px;
-			border: 2px solid $color-spot-1;
-			border-radius: 18px;
+			padding: 0px 2px 2px;
 			cursor: pointer;
 
-			@include vendorize("transition", 0.18s border-color ease-in-out);
-			@include mouseover(border-color, $color-spot-2);
-
-			a {
-				color: rgba(white, 0.84);
-				@include vendorize("transition", 0.35s color ease-in-out);
-			}
-
+			border-bottom: 0px solid transparent;
+			@include vendorize(transition, (
+				border-color 0.35s ease-out,
+				border-width 0.15s ease-out
+			));
+			
 		}
 
-		li:not(:first-child) { margin-left: 20px; }
-		li:hover a { color: white; }
-	
+		li:not(:first-child) { margin-left: 58px; }
+		
+		li.print:hover 		 { border-bottom: 4px solid $grcd-neon-pink 	!important; }
+		li.motion:hover 	 { border-bottom: 4px solid $grcd-neon-blue 	!important; }
+		li.interaction:hover { border-bottom: 4px solid $grcd-neon-green 	!important; }
+		li.about:hover 		 { border-bottom: 4px solid $grcd-neon-yellow 	!important; }
+
 	}
-
-	$indicator-height: 2px;
-
-	.indicator {
-		position: absolute;
-		bottom: $indicator-height;
-		left: 50%;
-		display: block;
-		overflow: visible;
-		@include same(width, height, 0px);
-	}
-
-	.indicator:before,
-	.indicator:after {
-		content: "";
-		position: absolute;
-		display: block;
-		width: 0vw;
-		height: $indicator-height;
-		background-color: $color-spot-2;
-		@include vendorize("transition", width 0.35s ease-in);
-	}
-
-	.indicator:before { left: 0; }
-	.indicator:after { right: 0; }
 	
 }
-
-header:hover .indicator:before,
-header:hover .indicator:after { width: 50vw; }
 
 }

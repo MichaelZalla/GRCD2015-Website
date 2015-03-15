@@ -1,125 +1,12 @@
 $highlight-indent: 14px;
 
-#landing {
+@import "components/landing/hero";
+@import "components/landing/info";
+@import "components/landing/promo";
+@import "components/landing/projectPreview";
+@import "components/landing/projectSelect";
 
-	section#branding {
-
-		.logo { max-width: 275px; }
-
-	}
-
-	section#info {
-		
-		.content { padding-bottom: 16px; }
-
-		.column { margin-top: 2.65em; }
-
-		// Pull back the highlight wrappers
-		.column > div { margin-left: -1 * $highlight-indent; }
-
-		h1 {
-			display: inline-block; // for highlight (background) rendering
-			padding: 3px 2px 0 14px;
-			letter-spacing: 0.45em;
-			@include same (font-size, margin-top, 1.72rem);
-			@include background("../images/highlight-stroke-yellow_2x.png", 100% 66.67%, left top);
-		}
-
-		.heading {
-			margin-top: 0.18rem;
-			@include typeset(1.24rem, 1.55, 0.055em,
-				$ss-type-default-font-family, $font-weight-bold);
-		}
-
-		// @TODO Replace arbitrary typographic styles with semantic classes
-		.column:first-child,
-		.schedule,
-		.address {
-			span:first-child { font-weight: $font-weight-semibold; }
-		}
-
-		.notice {
-			font-style: italic;
-			text-transform: capitalize;
-		}
-
-		.schedule li {
-			span { display: block; margin-top: 0.5em; }
-			&:first-child span { margin-top: 0; }
-		}
-
-		.date-time,
-		.address {
-			margin-top: 0;
-			span { display: inline; }
-		}
-
-		.address span { line-height: 1.8; }
-
-	}
-
-}
-
-@media #{ $small-only } {
-
-#landing {
-
-	section#branding {
-
-		display: table;
-		width: 100%;
-		@include same(height, max-height, 100vh);
-
-		.container { display: table-cell; vertical-align: middle; }
-		.content { display: table; }
-
-		.column { text-align: center; }
-
-		.logo {
-			margin-top: 3.0em;
-/*			padding-left: 0.35em;
-			max-width: 78vw;
-			max-height: 75vh;
-*/
-		}
-
-		.arrow-down {
-			
-			$arrow-size: 8.75vw;
-
-			position: absolute;
-			display: block;
-			bottom: 1em;
-			width: 100vw;
-			
-			margin: 0 auto;
-			max-width: none;
-			height: $arrow-size;
-			border-radius: 0;
-
-			@include background("../images/arrow-down_2x.png", $arrow-size auto, center center);
-
-			&:hover { background-color: transparent; }
-
-			@include vendorize(transition, opacity 0.35s ease-out);
-			
-			&.hidden,
-			&:focus { opacity: 0; }
-
-		}
-
-	}
-
-	section#info {
-		
-		.content { margin-top: 24px; }
-		.column { margin-top: 1.15em; }
-
-	}
-
-}
-
-}
+#landing { }
 
 @media #{ $medium-up } {
 
@@ -127,43 +14,6 @@ $highlight-indent: 14px;
 html, body { 
 	width: 100vw;
 	overflow-x: hidden;
-}
-
-#landing {
-
-	section#branding {
-
-		.content { overflow: hidden; }
-
-		.column > *:first-child { margin-top: 2.0; }
-
-		.letter-grid {
-			
-			position: absolute;
-			top: 0;
-			left: 0;
-			display: block;
-			width: 1484px;
-			height: 450px;
-
-			@include background("../images/letter-grid.svg", 95%);
-			@include vendorize(transform, translatez(0));
-
-		}
-
-		.logo {
-			margin-top: 96px;
-			margin-left: -19px;
-		}
-
-	}
-
-	section#info {
-
-		h1 { display: none; }
-
-	}
-
 }
 
 };
