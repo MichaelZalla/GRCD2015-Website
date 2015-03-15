@@ -39,7 +39,7 @@
 
 	$(function() {
 
-		var container = $('.project-preview');
+		var container = $('.project-preview .container');
 
 		var previewUI = {
 			title: 		container.find('.project-title'),
