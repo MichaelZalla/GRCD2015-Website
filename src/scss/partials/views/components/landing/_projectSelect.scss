@@ -2,34 +2,14 @@
 
 	overflow-y: hidden;
 
+	.content { margin-top: 32px; }
+
 	ul.students-list li.student {
 		span a {
 			padding-bottom: 0;
 			border: none;
 		}
 	}
-
-}
-
-@media #{ $medium-up } {
-
-#landing .project-select {
-	
-	ul.students-list {
-
-		// See: http://bennettfeely.com/flexplorer/
-
-		// Safari 6.1+
-		display: -webkit-flex;
-		-webkit-flex-flow: row wrap;
-		
-		// Chrome 29+, Firefox 28+, IE11+
-		display: flex;
-		flex-flow: row wrap;
-		
-	}
-
-}
 
 }
 
@@ -44,24 +24,49 @@
 @media #{ $medium-only } {
 
 #landing .project-select {
-
-	height: 42.5vh;
-
-	ul.students-list li.student { @include vendorize(flex, 0 1 25%); }
-	ul.students-list li.student:nth-child(n+5) span { margin-top: 0.76em; }
+	
+	ul.students-list li.student:nth-child(n+5) span { margin-top: 0.5em; }
 
 }
 
 }
 
-@media #{ $large-only } {
+@media #{ $medium-up } {
 
 #landing .project-select {
 
-	height: 33.33vh;
+	// height: 42.5vh;
+	height: 360px;
 
-	ul.students-list li.student { @include vendorize(flex, 0 1 20.0%); }
-	ul.students-list li.student:nth-child(n+6) span { margin-top: 0.76em; }
+	ul.students-list {
+
+		// See: http://bennettfeely.com/flexplorer/
+
+		// Safari 6.1+
+		display: -webkit-flex;
+		-webkit-flex-flow: row wrap;
+		
+		// Chrome 29+, Firefox 28+, IE11+
+		display: flex;
+		flex-flow: row wrap;
+
+		li.student { @include vendorize(flex, 0 1 25%); }
+		
+	}
+
+}
+
+}
+
+@media #{ $large-up } {
+
+#landing .project-select {
+
+	// height: 33.33vh;
+	// overflow: auto;
+
+	ul.students-list li.student { @include vendorize(flex, 0 1 20%); }
+	ul.students-list li.student:nth-child(n+6) span { margin-top: 0.5em; }
 
 }
 

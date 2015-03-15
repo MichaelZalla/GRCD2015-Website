@@ -1,6 +1,6 @@
 #landing .project-preview {
 
-	@include background("../images/preview/abc.png", auto 110%);
+	@include background("../images/preview/abc.png", auto 120%);
 
 	overflow-y: hidden;
 
@@ -26,8 +26,9 @@
 
 		.project-headshot {
 			margin-top: 24px;
+			padding-left: 24px;
 			width: auto;
-			height: 250px;
+			height: 180px;
 		}
 		
 	}
@@ -66,8 +67,9 @@
 
 #landing .project-preview {
 	
-	height: 50vh;
-	min-height: 450px;
+	// height: 50vh;
+	// min-height: 450px;
+	height: 450px;
 	
 	.project-headshot { display: none; }
 
@@ -75,11 +77,12 @@
 
 }
 
-@media #{ $large-only } {
+@media #{ $large-up } {
 
 #landing .project-preview {
-	height: 66.66vh;
-	min-height: 450px;
+	// height: 66.66vh;
+	// min-height: 450px;
+	height: 480px;
 }
 
 }

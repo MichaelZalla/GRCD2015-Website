@@ -39,7 +39,7 @@
 
 	$(function() {
 
-		var container = $('.project-preview .container');
+		var container = $('.project-preview');
 
 		var previewUI = {
 			title: 		container.find('.project-title'),
@@ -49,17 +49,22 @@
 			headshot: 	container.find('.project-headshot')
 		};
 
+		var fadeSpeed = 400;
+
 		function onStudentHover(e) {
 
 			var id = $($(e.target)).attr('data-sixPlusTwo');
 
-			container.fadeOut(function() {
+			container.animate({ 'opacity': 0 }, fadeSpeed, function() {
+
 				var wallpaper = new Image();
-				wallpaper.addEventListener('load', function(e) {
-					updatePreview(id);
-					container.fadeIn();
-				});
+					wallpaper.addEventListener('load', function(e) {
+						updatePreview(id);
+						container.animate({ 'opacity': 1 }, fadeSpeed);
+					});
+				
 				wallpaper.src = 'images/preview/' + id + '.png';
+
 			});
 
 		}

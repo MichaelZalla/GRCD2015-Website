@@ -2,7 +2,7 @@
   "name": "daapworks-frontend",
   "version": "0.0.1",
   "description": "Prototyping for the DAAPworks #grcd2015 senior exhibit site.",
-  "keywords": [ ],
+  "keywords": [],
   "authors": [
     "Michael Zalla"
   ],
@@ -21,7 +21,8 @@
     "jquery": "~2.1.1",
     "jquery-waypoints": "~2.0.5",
     "foundation": "~5.4.7",
-    "ScrollIt": "*"
+    "ScrollIt": "*",
+    "viewport-units-buggyfill": "~0.5.1"
   },
   "resolutions": {
     "jquery": "~2.1.1"

@@ -44,7 +44,7 @@ header {
 	#logo {
 		margin: 0 !important;
 		padding-bottom: 4px;
-		@include background("/images/grcd-2015-title.png", $logo-width $logo-height, left top);
+		@include background("../images/grcd-2015-title.png", $logo-width $logo-height, left top);
 	}
 
 	/* Responsive menu navigation */
