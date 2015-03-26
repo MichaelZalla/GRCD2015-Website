@@ -69,67 +69,67 @@
 					<ul class="preview-cards light">
 						<li class="preview-card" data-student="abc">
 							<div class="content-wrapper">
-								<span class="label">Student 1</span>
+								<span class="label">Ayan Daniels</span>
 								<span class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</span>
 							</div>
 						</li>
 						<li class="preview-card" data-student="def">
 							<div class="content-wrapper">
-								<span class="label">Student 2</span>
+								<span class="label">Loreali Jackson</span>
 								<span class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</span>
 							</div>
 						</li>
 						<li class="preview-card" data-student="ghi">
 							<div class="content-wrapper">
-								<span class="label">Student 3</span>
+								<span class="label">Aaron Hope</span>
 								<span class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</span>
 							</div>
 						</li>
 						<li class="preview-card" data-student="abc">
 							<div class="content-wrapper">
-								<span class="label">Student 4</span>
+								<span class="label">Alex Wheeler</span>
 								<span class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</span>
 							</div>
 						</li>
 						<li class="preview-card" data-student="def">
 							<div class="content-wrapper">
-								<span class="label">Student 5</span>
+								<span class="label">Arielle Giczkowski</span>
 								<span class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</span>
 							</div>
 						</li>
 						<li class="preview-card" data-student="ghi">
 							<div class="content-wrapper">
-								<span class="label">Student 6</span>
+								<span class="label">Brittany Newell</span>
 								<span class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</span>
 							</div>
 						</li>
 						<li class="preview-card" data-student="abc">
 							<div class="content-wrapper">
-								<span class="label">Student 7</span>
+								<span class="label">Catalina Florea</span>
 								<span class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</span>
 							</div>
 						</li>
 						<li class="preview-card" data-student="def">
 							<div class="content-wrapper">
-								<span class="label">Student 8</span>
+								<span class="label">Christina Coobatis</span>
 								<span class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</span>
 							</div>
 						</li>
 						<li class="preview-card" data-student="ghi">
 							<div class="content-wrapper">
-								<span class="label">Student 6</span>
+								<span class="label">Christopher Wells</span>
 								<span class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</span>
 							</div>
 						</li>
 						<li class="preview-card" data-student="abc">
 							<div class="content-wrapper">
-								<span class="label">Student 7</span>
+								<span class="label">Dane Mason</span>
 								<span class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</span>
 							</div>
 						</li>
 						<li class="preview-card" data-student="def">
 							<div class="content-wrapper">
-								<span class="label">Student 8</span>
+								<span class="label">Danielle Bradford</span>
 								<span class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</span>
 							</div>
 						</li>
@@ -156,8 +156,6 @@
 
 			if(id == currentId) return;
 
-			console.log("Yep", id);
-
 			currentId = id;
 
 			var prev = buffer.find('.background.active'),
@@ -169,13 +167,17 @@
 
 		}
 
-		function onPreviewCardHover(e) {
-
-			setActiveWallpaper($(e.currentTarget).attr('data-student'));
-
+		function onPreviewCardMouseout(e) {
+			console.log(e);
+			// $('.background').removeClass('active');
 		}
 
-		$('.preview-card').on('mouseover', onPreviewCardHover);
+		function onPreviewCardMouseover(e) {
+			setActiveWallpaper($(e.currentTarget).attr('data-student'));
+		}
+
+		$('.preview-card').on('mouseout', onPreviewCardMouseout);
+		$('.preview-card').on('mouseover', onPreviewCardMouseover);
 
 		// Initial trigger for first project background
 		$('.preview-card').first().trigger('mouseover');

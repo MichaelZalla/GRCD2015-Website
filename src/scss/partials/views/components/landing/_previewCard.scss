@@ -4,7 +4,7 @@ li.preview-card {
 	overflow: hidden;
 	min-height: 196px;
 	cursor: pointer;
-	
+
 	@include same(padding-right, padding-bottom, 18px);
 
 	@include vendorize(flex, 0 1 25%);
@@ -15,21 +15,23 @@ li.preview-card {
 		bottom: 0;
 		overflow: hidden;
 		margin-right: 22px;
-		padding: 14px 12px;
+		padding: 16px 12px;
 		width: 92%;
 		height: 40px;
 		border-bottom: 3px solid white;
-		
-		background-color: rgba(black, 0.0);
+		background-color: rgba(white, 0.0);
 
 		@include vendorize(transition, (
-			height 0.24s ease-in-out,
-			background-color 0.18s ease-in-out
+			height 0.24s ease-out,
+			background-color 0.18s ease-out,
+			color 0.18s ease-out
 			));
 
 		span.label,
 		span.copy { margin-top: 0; }
 		
+		span.label { font-size: 1.15rem; }
+
 		span.copy {
 
 			font-size: 1.05rem;
@@ -48,7 +50,8 @@ li.preview-card {
 
 	&:hover .content-wrapper {
 		height: 140px;
-		background-color: rgba(black, 0.65);
+		background-color: rgba(white, 0.8);
+		color: rgba(black, 0.94);
 	}
 
 }
