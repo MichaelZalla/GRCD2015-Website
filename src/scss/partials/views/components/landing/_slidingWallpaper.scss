@@ -1,0 +1,34 @@
+ul.background-buffer {
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: lighten(black, 18%);
+
+	li.background {
+
+		position: absolute;
+
+		@include same(width, height, inherit);
+		@include background("#");
+
+		@include vendorize(transition, (
+			background-position-y 0.3s ease-out,
+			opacity 0.75s ease-out
+			));
+
+		&.active {
+			background-position-y: 0;
+			opacity: 1.0;
+		}
+		
+		&:not(.active) {
+			background-position-y: 100vh;
+			opacity: 0.0;
+		}
+
+	}
+
+}

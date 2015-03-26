@@ -1,0 +1,54 @@
+li.preview-card {
+
+	position: relative;
+	overflow: hidden;
+	min-height: 196px;
+	cursor: pointer;
+	
+	@include same(padding-right, padding-bottom, 18px);
+
+	@include vendorize(flex, 0 1 25%);
+
+	.content-wrapper {
+		
+		position: absolute;
+		bottom: 0;
+		overflow: hidden;
+		margin-right: 22px;
+		padding: 14px 12px;
+		width: 92%;
+		height: 40px;
+		border-bottom: 3px solid white;
+		
+		background-color: rgba(black, 0.0);
+
+		@include vendorize(transition, (
+			height 0.24s ease-in-out,
+			background-color 0.18s ease-in-out
+			));
+
+		span.label,
+		span.copy { margin-top: 0; }
+		
+		span.copy {
+
+			font-size: 1.05rem;
+
+			&:before { margin-top: 4px; }
+			
+			&:before {
+				content: "—";
+				display: block;
+				text-align: left;
+			}
+
+		}
+
+	}
+
+	&:hover .content-wrapper {
+		height: 140px;
+		background-color: rgba(black, 0.65);
+	}
+
+}

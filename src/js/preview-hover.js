@@ -55,18 +55,18 @@
 
 			container.fadeOut(function() {
 				var wallpaper = new Image();
-				wallpaper.addEventListener('load', function(e) {
-					updatePreview(id);
-					container.fadeIn();
-				});
-				wallpaper.src = 'images/preview/' + id + '.png';
+					wallpaper.addEventListener('load', function(e) {
+						updatePreview(id);
+						container.fadeIn();
+					});
+					wallpaper.src = 'images/preview/' + id + '.png';
 			});
 
 		}
 
 		function updatePreview(id) {
 			
-			container.css({ 'background-image': 'url(\'images/preview/' + id + '.png\')' });
+			container.css({'background-image': 'url(\'images/preview/' + id + '.png\')' });
 
 			previewUI.title.html(projects[id].title);
 			previewUI.subtitle.html(projects[id].subtitle);

@@ -1,19 +1,25 @@
-$highlight-indent: 14px;
+@import "components/landing/slidingWallpaper";
+@import "components/landing/previewCard";
 
-@import "components/landing/hero";
-@import "components/landing/info";
-@import "components/landing/promo";
-@import "components/landing/projectPreview";
-@import "components/landing/projectSelect";
+#landing {
 
-#landing { }
+	section#project-previews {
 
-@media #{ $medium-up } {
+		.content {
+			margin-top: 76px;
+			width: 100%;
+		}
 
-// Prevents scrolling of letter-grid background
-html, body { 
-	width: 100vw;
-	overflow-x: hidden;
+		ul.preview-cards {
+
+			display: webkit-flex;
+			-webkit-flex-flow: row wrap;
+			
+			display: flex;
+			flex-flow: row wrap;
+
+		}
+
+	}
+
 }
-
-};
