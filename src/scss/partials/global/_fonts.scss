@@ -15,55 +15,55 @@
 // @include fontface("Proxima Nova", "/fonts/ProximaNova/ProximaNova-Light",
 // 	$font-weight-light, normal);
 
-@include fontface("Proxima Nova", "/fonts/ProximaNova/ProximaNova-Regular",
+@include fontface("Proxima Nova", "../fonts/ProximaNova/ProximaNova-Regular",
 	$font-weight-regular, normal);
 
-@include fontface("Proxima Nova", "/fonts/ProximaNova/ProximaNova-Semibold",
+@include fontface("Proxima Nova", "../fonts/ProximaNova/ProximaNova-Semibold",
 	$font-weight-semibold, normal);
 
-@include fontface("Proxima Nova", "/fonts/ProximaNova/ProximaNova-Bold",
+@include fontface("Proxima Nova", "../fonts/ProximaNova/ProximaNova-Bold",
 	$font-weight-bold, normal);
 
 /* Proxima Nova (Italic) */
 
-// @include fontface("Proxima Nova", "/fonts/ProximaNova/ProximaNova-LightItalic",
+// @include fontface("Proxima Nova", "../fonts/ProximaNova/ProximaNova-LightItalic",
 // 	$font-weight-light, italic);
 
-@include fontface("Proxima Nova", "/fonts/ProximaNova/ProximaNova-RegularItalic",
+@include fontface("Proxima Nova", "../fonts/ProximaNova/ProximaNova-RegularItalic",
 	$font-weight-regular, italic);
 
-// @include fontface("Proxima Nova", "/fonts/ProximaNova/ProximaNova-SemiboldItalic",
+// @include fontface("Proxima Nova", "../fonts/ProximaNova/ProximaNova-SemiboldItalic",
 // 	$font-weight-semibold, italic);
 
-// @include fontface("Proxima Nova", "/fonts/ProximaNova/ProximaNova-BoldItalic",
+// @include fontface("Proxima Nova", "../fonts/ProximaNova/ProximaNova-BoldItalic",
 // 	$font-weight-bold, italic);
 
 /* Chaparral Pro (Normal) */
 
-@include fontface("Chaparral Pro", "/fonts/ChaparralPro/ChaparralPro-Regular",
+@include fontface("Chaparral Pro", "../fonts/ChaparralPro/ChaparralPro-Regular",
 	$font-weight-regular, normal);
 
-// @include fontface("Chaparral Pro", "/fonts/ChaparralPro/ChaparralPro-Semibold",
+// @include fontface("Chaparral Pro", "../fonts/ChaparralPro/ChaparralPro-Semibold",
 // 	$font-weight-semibold, normal);
 
-// @include fontface("Chaparral Pro", "/fonts/ChaparralPro/ChaparralPro-Bold",
+// @include fontface("Chaparral Pro", "../fonts/ChaparralPro/ChaparralPro-Bold",
 // 	$font-weight-bold, normal);
 
 /* Chaparral Pro (Italic) */
 
-@include fontface("Chaparral Pro", "/fonts/ChaparralPro/ChaparralPro-RegularItalic",
+@include fontface("Chaparral Pro", "../fonts/ChaparralPro/ChaparralPro-RegularItalic",
 	$font-weight-regular, italic);
 
-// @include fontface("Chaparral Pro", "/fonts/ChaparralPro/ChaparralPro-SemiboldItalic",
+// @include fontface("Chaparral Pro", "../fonts/ChaparralPro/ChaparralPro-SemiboldItalic",
 // 	$font-weight-semibold, italic);
 
-// @include fontface("Chaparral Pro", "/fonts/ChaparralPro/ChaparralPro-BoldItalic",
+// @include fontface("Chaparral Pro", "../fonts/ChaparralPro/ChaparralPro-BoldItalic",
 // 	$font-weight-bold, italic);
 
 /* Brandon Grotesque (Normal) */
 
-// @include fontface("Brandon Grotesque", "/fonts/BrandonGrotesque/Brandon-Regular",
+// @include fontface("Brandon Grotesque", "../fonts/BrandonGrotesque/Brandon-Regular",
 // 	$font-weight-regular, normal);
 
-@include fontface("Brandon Grotesque", "/fonts/BrandonGrotesque/Brandon-Bold",
+@include fontface("Brandon Grotesque", "../fonts/BrandonGrotesque/Brandon-Bold",
 	$font-weight-bold, normal);

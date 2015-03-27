@@ -5,12 +5,27 @@
 
 	section#project-previews {
 
+		position: relative;
+		background-color: black;
+
 		.content {
-			margin-top: 76px;
+			@include same(margin-top, margin-bottom, 0);
 			width: 100%;
+			height: 100vh;
+			overflow-y: hidden;
+		}
+
+		.row {
+			height: 100vh;
+			overflow-x: hidden;
+			overflow-y: scroll;
+			background-color: green;
 		}
 
 		ul.preview-cards {
+
+			padding-top: 76px;
+			padding-bottom: 32px;
 
 			display: webkit-flex;
 			-webkit-flex-flow: row wrap;
