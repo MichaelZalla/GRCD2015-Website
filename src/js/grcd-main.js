@@ -20,24 +20,14 @@
 
 		var logo = $('#branding').find('.logo');
 		var grid = $('#branding').find('.letter-grid');
-		
-		// Project preview wallapper (dynamic position)
-
-		var projectPreview = $('.project-preview')
-		var projectPreviewImage = projectPreview.find('.preview-image');
 
 		function onResizeWindow(e) {
 
-			var lo = logo.offset(),
-				po = projectPreviewImage.offset();
+			var lo = logo.offset();
 
 			grid.css({
-				'left': lo.left - 274,
-				'top': lo.top - 210
-			});
-
-			projectPreview.css({
-				'background-position-x': po.left
+				'left': lo.left - 245,
+				'top': lo.top - 240
 			});
 
 		}
