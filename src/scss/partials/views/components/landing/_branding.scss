@@ -74,10 +74,10 @@
 		top: 0;
 		left: 0;
 		display: block;
-		width: 1484px;
-		height: 450px;
+		width: 1680px;
+		height: 508px;
 
-		@include background("../images/letter-grid.svg", 95%);
+		@include background("../images/letter-grid-flat.svg", 99%);
 		@include vendorize(transform, translatez(0));
 
 	}
