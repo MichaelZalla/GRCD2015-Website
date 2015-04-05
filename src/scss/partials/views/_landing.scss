@@ -2,8 +2,9 @@ $highlight-indent: 14px;
 
 @import "components/landing/branding";
 @import "components/landing/info";
-// @import "components/landing/promo";
 @import "components/landing/previews";
+@import "components/landing/slidingPreview";
+@import "components/landing/previewCard";
 
 #landing { }
 

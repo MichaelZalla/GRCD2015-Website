@@ -1,5 +1,32 @@
 #landing #previews {
 
+	position: relative;
+
+	.content {
+		@include same(margin-top, margin-bottom, 0);
+		width: 100%;
+		height: 100vh;
+		overflow-y: hidden;
+	}
+
+	.row {
+		height: 100vh;
+		overflow-x: hidden;
+		overflow-y: scroll;
+	}
+
+	ul.preview-cards {
+
+		padding-top: 76px;
+		padding-bottom: 32px;
+
+		display: webkit-flex;
+		-webkit-flex-flow: row wrap;
+		
+		display: flex;
+		flex-flow: row wrap;
+
+	}
 
 }
 
@@ -7,6 +34,7 @@
 
 #landing #previews {
 
+	
 
 }
 
@@ -16,6 +44,7 @@
 
 #landing #previews {
 
+	
 
 }
 
