@@ -35,6 +35,13 @@ module.exports = {
 				src: ['**/*'],
 				dest: 'dist/images'
 			},
+			{	// media
+				expand: true,
+				flatten: false,
+				cwd: 'src/media/',
+				src: ['**/*'],
+				dest: 'dist/media'
+			},
 			{
 				// fonts
 				expand: true,

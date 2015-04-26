@@ -14,8 +14,8 @@ module.exports = {
 	waypoint: {
 		files: {
 			// jquery-waypoints.min.js
-			'dist/js/vendor/jquery/plugins/jquery-waypoints.min.js':
-				['bower_components/jquery-waypoints/waypoints.min.js']
+			'dist/js/vendor/waypoints/waypoints.min.js':
+				['bower_components/waypoints/lib/noframework.waypoints.min.js']
 		}
 	},
 	
@@ -38,13 +38,13 @@ module.exports = {
 	angular: {
 		files: {
 			// angular.js
-			'dist/js/vendor/angular/angular.js':
-				['bower_components/angular/angular.js'],
+			'dist/js/vendor/angular/angular.min.js':
+				['bower_components/angular/angular.min.js'],
 			'dist/js/vendor/angular/angular.min.map':
 				['bower_components/angular/angular.map'],
 			// angular-route.min.js
-			'dist/js/vendor/angular/angular-route.js':
-				['bower_components/angular-route/angular-route.js'],
+			'dist/js/vendor/angular/angular-route.min.js':
+				['bower_components/angular-route/angular-route.min.js'],
 			'dist/js/vendor/angular/angular-route.min.js.map':
 				['bower_components/angular-route/angular-route.min.js.map']
 		}

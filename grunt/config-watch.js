@@ -4,7 +4,7 @@ module.exports = {
 	
 	copy: {
 		files: ['src/**'],
-		tasks: ['concat', 'copy']
+		tasks: ['concat', /*'uglify',*/ 'copy']
 	},
 	
 	sass: {
