@@ -27,3 +27,6 @@ bower_components
 # Project build
 dist
 vendor
+
+# Deployment
+ssh
