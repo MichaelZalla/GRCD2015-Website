@@ -1,5 +1,7 @@
 #landing #branding {
 	
+	background-color: white;
+
 	.logo { max-width: 275px; }
 
 }
@@ -23,7 +25,7 @@
 	// Logo sizing
 
 	.logo {
-		margin-top: 3.0em;
+		margin-top: -1em;
 		padding-left: 0.35em;
 		max-width: 78vw;
 		max-height: 75vh;
@@ -33,21 +35,21 @@
 
 	.arrow-down {
 		
-		$arrow-size: 8.75vw;
+		$arrow-size: 38px;
 
 		position: absolute;
-		display: block;
-		bottom: 1em;
-		width: 100vw;
+		bottom: 1.65em;
 		
+		display: block;
 		margin: 0 auto;
-		max-width: none;
+		
+		width: 100vw;
 		height: $arrow-size;
+		max-width: none;
 		border-radius: 0;
+		opacity: 0.35;
 
-		@include background("../images/arrow-down_2x.png", $arrow-size auto, center center);
-
-		&:hover { background-color: transparent; }
+		@include background("../images/icons/arrow-down.svg", $arrow-size auto, center center);
 
 		@include vendorize(transition, opacity 0.35s ease-out);
 		
@@ -64,28 +66,40 @@
 
 #landing #branding {
 	
-	.content { overflow: hidden; }
+	position: relative;
+	overflow: hidden;
+	max-width: 100vw;
+	width: 100%;
 
 	.column > *:first-child { margin-top: 2.55em; }
 
 	.letter-grid {
 		
 		position: absolute;
-		top: 0;
-		left: 0;
+		top: 0px;
+		left: -80.5px; // dynamic
 		display: block;
 		width: 1680px;
 		height: 508px;
 
-		@include background("../images/letter-grid-flat.svg", 99%);
+		@include background("../images/blank.png", 99%);
 		@include vendorize(transform, translatez(0));
 
+	}
+
+	.letter-grid + a { display: none; }
+
+	.content {
+		padding-top: 192px;
+		overflow-y: hidden;
 	}
 
 	.logo {
 		margin-top: 96px;
 		margin-left: -19px;
 	}
+
+	.arrow-down { display: none; }
 
 }
 

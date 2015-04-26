@@ -1,31 +1,44 @@
+@import "previewCard";
+
 #landing #previews {
 
-	position: relative;
+	min-height: 110vh;
 
-	.content {
-		@include same(margin-top, margin-bottom, 0);
-		width: 100%;
-		height: 100vh;
-		overflow-y: hidden;
-	}
+	.row { @include same(padding-top, padding-bottom, 2px); }
 
-	.row {
-		height: 100vh;
-		overflow-x: hidden;
-		overflow-y: scroll;
-	}
+	project-gallery {
 
-	ul.preview-cards {
-
-		padding-top: 76px;
-		padding-bottom: 32px;
-
-		display: webkit-flex;
-		-webkit-flex-flow: row wrap;
+		display: block;
 		
-		display: flex;
-		flex-flow: row wrap;
+		&:not(:last-child) { margin-bottom: 128px; }
 
+		.focus {
+			display: block;
+			margin-top: 0;
+			padding-top: 3.65em;
+			padding-bottom: 1.5em;
+			@include same(padding-left, padding-right, 0.9375rem);
+		}
+
+		ul.preview-cards {
+			
+			display: -webkit-flex;
+			-webkit-flex-flow: row wrap;
+			
+			display: flex;
+			flex-flow: row wrap;
+
+		}
+
+	}
+
+	project-gallery:not(:first-child) {
+		.focus { border-top: 1px solid darken(white, 10%); }
+	}
+
+	&.filtered project-gallery {
+		.focus { display: none; }
+		&:first-child { margin-top: 4.5em; }
 	}
 
 }
@@ -34,7 +47,32 @@
 
 #landing #previews {
 
-	
+	.focus,
+	.preview-card .content-wrapper {
+		@include same(padding-left, padding-right,
+			$ss-mobile-content-side-padding);
+	}
+
+	.preview-card {
+		
+		@include vendorize(flex, 0 1 100%);
+
+		.content-wrapper {
+			@include background("../images/icons/arrow-next-mobile.svg",
+				auto 24px, center right $ss-mobile-content-side-padding);
+		}
+
+	}
+
+}
+
+}
+
+@media #{ $medium-only } {
+
+#landing #previews {
+
+	.preview-card { @include vendorize(flex, 0 1 50%); }
 
 }
 
@@ -45,6 +83,16 @@
 #landing #previews {
 
 	
+
+}
+
+}
+
+@media #{ $large-up } {
+
+#landing #previews {
+
+	.preview-card { @include vendorize(flex, 0 1 33.33%); }	
 
 }
 

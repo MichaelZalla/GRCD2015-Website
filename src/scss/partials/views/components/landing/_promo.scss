@@ -1,12 +1,66 @@
 #landing #promo {
+
+	.content {
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	motion-promo {
 	
-	@include background("../images/motion-promo.png");
+		position: relative;
+		display: block;
+		overflow: hidden;
+
+		video,
+		video-controls {
+			display: block;
+			overflow: auto;
+		}
+
+		video {
+			max-width: $ss-desktop-content-max-width;
+			width: 100vw;
+			height: auto;
+		}
+		
+		video-controls {
+			
+			text-align: center;
+
+			&.playing 	.video-control.pause,
+			&.paused 	.video-control.play,
+			&.ended 	.video-control.replay { display: inline-block; }
+
+			.video-control {
+				
+				display: none;
+				text-indent: -9999;
+				cursor: pointer;
+				
+				@include background("../images/blank.png");
+				@include same(color, background-color, transparent);
+				
+				&.play { background-image: url('../images/controls/control-play.svg'); }
+				&.pause { background-image: url('../images/controls/control-pause.svg'); }
+				&.replay { background-image: url('../images/controls/control-replay.svg'); }
+
+			}
+
+		}
+
+	}
 
 }
 
 @media #{ $small-only } {
 
 #landing #promo {
+
+	motion-promo {
+
+		video-controls { display: none; }
+
+	}
 
 }
 
@@ -15,7 +69,32 @@
 @media #{ $medium-up } {
 
 #landing #promo {
+
+	// Hide promo on #previews hover
 	
+	opacity: 1.0;
+	&.hidden { opacity: 0.0; }
+	@include vendorize(transition, opacity 0.35s ease-in-out);
+
+	motion-promo {
+
+		video-controls {
+
+			position: absolute;
+			right: 38px;
+			bottom: 0;
+
+			.video-control {
+				@include same(width, height, 96px);
+				@include vendorize(transition, opacity 0.35s ease-in-out);
+			}
+
+			&.playing:not(:hover) .video-control { opacity: 0.35; }
+
+		}
+
+	}	
+
 }
 
 }

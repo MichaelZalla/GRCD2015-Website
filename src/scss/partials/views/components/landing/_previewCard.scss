@@ -1,57 +1,68 @@
-li.preview-card {
+.preview-card {
 
-	position: relative;
 	overflow: hidden;
-	min-height: 196px;
-	cursor: pointer;
 
-	@include same(padding-right, padding-bottom, 18px);
+	@include same(padding-top, padding-bottom, 1.0em);
 
-	@include vendorize(flex, 0 1 33.33%);
+	&:not(:last-child) {
+		border-bottom: 1px solid darken(white, 10%);
+	}
 
 	.content-wrapper {
-		
-		position: absolute;
-		bottom: 0;
+
 		overflow: hidden;
-		margin-right: 22px;
-		padding: 16px 12px;
-		width: 92%;
-		height: 40px;
-		border-bottom: 3px solid white;
-		background-color: rgba(white, 0.0);
 
-		@include vendorize(transition, (
-			height 0.24s ease-out,
-			background-color 0.18s ease-out,
-			color 0.18s ease-out
-			));
-
-		span.label,
-		span.copy { margin-top: 0; }
+		span { @include vendorize(transition, color 0.35s ease-in-out); }
 		
-		span.label { font-size: 1.15rem; }
+		.project-title {
+			margin-top: 0;
+			font-size: 1.35rem;
+		}
 
-		span.copy {
-
-			font-size: 1.05rem;
-
-			&:before { margin-top: 4px; }
-			
-			&:before {
-				content: "—";
-				display: block;
-				text-align: left;
-			}
-
+		.project-students .label {
+			font-size: 1.15rem;
+			&:first-child { margin-top: 0.35em; }
 		}
 
 	}
 
-	&:hover .content-wrapper {
-		height: 140px;
-		background-color: rgba(white, 0.8);
-		color: rgba(black, 0.94);
+}
+
+@media #{ $medium-up } {
+
+.preview-card {
+
+	position: relative;
+	margin-top: 4.0em;
+	min-height: 196px;
+	
+	@include same(padding-right, padding-bottom, 18px);
+	
+	&:not(:last-child) { border: none; }
+
+	.content-wrapper {
+
+		position: absolute;
+		bottom: 0;
+		overflow: hidden;
+		margin-right: 24px;
+		padding: 26px 18px 24px;
+		width: 88%;
+		background-color: rgba(white, 0.0);
+
+		@include vendorize(transition, background-color 0.35s ease-out);
+		
+		&:hover {
+			color: rgba(black, 0.94);
+			background-color: rgba(white, 1.0);
+		}
+
+		span { cursor: default; }
+
 	}
+
+	.project-students .label:first-child { margin-top: 0.5em; }
+
+}
 
 }

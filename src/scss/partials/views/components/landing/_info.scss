@@ -1,10 +1,9 @@
 #landing #info {
 		
 	min-height: 280px;
+	background-color: white;
 
 	.content { padding-bottom: 16px; }
-
-	.column { margin-top: 1.0em; }
 
 	// Pull back the highlight wrappers
 	.column > div { margin-left: -1 * $highlight-indent; }
@@ -58,8 +57,28 @@
 		padding: 3px 2px 0 14px;
 		letter-spacing: 0.45em;
 		@include same (font-size, margin-top, 1.72rem);
-		@include background("../images/highlight-stroke-yellow_2x.png", 100% 66.67%, left top);
+		@include background("../images/branding/highlight-stroke-yellow_2x.png", 100% 66.67%, left top);
 	}
+
+}
+
+}
+
+@media #{ $medium-only } {
+
+#landing #info {
+
+	.column { margin-top: 1.76em; }
+
+}
+
+}
+
+@media #{ $large-only } {
+
+#landing #info {
+
+	.column { margin-top: 1.0em; }
 
 }
 

@@ -1,0 +1,227 @@
+#project {
+
+	.banner {
+		height: 92px + 152px;
+		@include background("../images/blank.png");
+	}
+
+	section#showcase {
+
+		span,
+		span a { font-family: "Proxima Nova"; }
+
+		.content {
+
+			padding-top: 82px;
+			padding-bottom: 2px;
+
+			.project-info {
+
+				.project-title {
+					margin-top: 0;
+					font-size: 2.76rem;
+					letter-spacing: 0.035em;
+				}
+
+				.project-subtitle {
+					margin-top: 0.65em;
+					line-height: 1.5;
+					font-weight: $font-weight-regular;
+				}
+
+				.project-description { margin-top: 1.5em }
+				
+				.project-images img { margin-top: 2.35em; }
+
+				.project-description {
+					font-family: "Proxima Nova";
+					line-height: 1.35;
+				}
+
+			}
+
+			.student-info {
+	
+				.student-profile {
+
+					vertical-align: top;
+
+					.student-portrait {
+						max-width: 200px;
+						height: auto;
+					}
+
+					.student-name {
+						font-size: 1.5rem;
+						letter-spacing: 0.065em;
+					}
+
+					.student-focuses { height: 40px; }
+
+					.student-focuses span,
+					.student-focuses span:after {
+						margin-top: 0.76em;
+						font-weight: $font-weight-regular;
+						font-size: 1.08rem;
+						line-height: 1.35;
+					}
+					
+					.student-focuses li:not(:first-child) span { margin-top: 0;	}
+					.student-focuses li:not(:last-child) span:after {
+						content: "&";
+						display: inline-block;
+						margin-top: 0;
+						padding-left: 4px;
+					}
+
+					.student-website {
+						margin-top: 1.35em;
+						a { margin-top: 0; }
+					}
+
+					.student-superlative {
+						font-style: italic;
+						letter-spacing: -0.015em;
+					}
+
+					.student-coops {
+
+						overflow: hidden;
+
+						.heading {
+							font-size: 1.15rem;
+							letter-spacing: 0.065em;
+						}
+
+						li span { margin-top: 0.65em; }
+						li:not(:first-child) span { margin-top: 0.35em; }
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	section#navigation {
+
+		.row .row { @include same(margin-left, margin-right, 0); }
+
+		.column.small-4:nth-child(1) { text-align: left; }
+		.column.small-4:nth-child(2) { text-align: center; }
+		.column.small-4:nth-child(3) { text-align: right; }
+
+		.goto-prev,
+		.goto-next,
+		.goto-top {
+			@include typeset(1.15rem, 1.0, 0.035em, "Proxima Nova", $font-weight-semibold);
+			text-transform: uppercase;
+		}
+
+		.goto-prev,
+		.goto-top,
+		.goto-next {
+			margin-top: 0;
+			padding-top: 1px;
+			height: 16px;
+		}
+
+		.goto-prev {
+			padding-left: 26px;
+			@include background("../images/icons/arrow-prev.svg", auto 92%, left center);
+		}
+
+		.goto-next {
+			padding-right: 26px;
+			@include background("../images/icons/arrow-next.svg", auto 92%, right center);
+		}
+	
+	}
+
+}
+
+@media #{ $small-only } {
+
+#project {
+
+	section#showcase,
+	section#navigation {
+		.column { @include same(padding-left, padding-right, 0); }
+	}
+
+	section#showcase {
+
+		.content { @include same(padding-left, padding-right, 0); }	
+
+		.column:not(:first-child) { margin-top: 3.0em; }
+
+		span { @include same(padding-left, padding-right, $ss-mobile-content-side-padding); }
+
+		.student-profile:not(:first-child) {
+			margin-top: 3.0em;
+			padding-top: 3.5em;
+			border-top: 1px solid darken(white, 10%);
+		}
+		
+	}
+
+}
+
+}
+
+@media #{ $medium-only } {
+
+#project {
+
+	section#showcase {
+
+		.student-profiles { width: 100%; }
+
+		.student-profile {
+			margin-top: 0;
+			display: inline-block;
+			width: 49.5%;
+		}
+
+	}
+
+}
+
+}
+
+@media #{ $medium-up } {
+
+#project {
+
+	section#navigation {
+
+		.row.align-bottom > .column:first-child .row { margin-bottom: 1px; }
+
+		.goto-top { margin-top: 0; }
+
+	}
+	
+}
+
+}
+
+@media #{ $large-only } {
+
+#project {
+
+	section#showcase {
+
+		.student-profile:not(:first-child) {
+			margin-top: 3.76em;
+			padding-top: 2.24em;
+			border-top: 1px solid darken(white, 10%);
+		}
+
+	}
+
+}
+
+}

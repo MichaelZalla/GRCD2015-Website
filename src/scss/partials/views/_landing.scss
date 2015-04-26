@@ -2,18 +2,56 @@ $highlight-indent: 14px;
 
 @import "components/landing/branding";
 @import "components/landing/info";
+@import "components/landing/promo";
 @import "components/landing/previews";
 @import "components/landing/slidingPreview";
 @import "components/landing/previewCard";
 
-#landing { }
+#landing {
+
+	section {
+		span, a { @include vendorize(transition, color 0.35s ease-in-out); }
+	}
+
+}
+
+@media #{ $small-only } {
+
+#landing {
+
+	// Hide default header in favor of filter bar
+	
+	header { display: none; }
+
+	// Removes default side padding from .content section, allowing
+	// for full-width borders between project listings
+	
+	section#previews .content {
+		
+		@include same(padding-left, padding-right, 0);
+		
+		project-gallery { margin-bottom: 0; }
+
+	}
+
+	section#previews .filter-menu .content-wrapper:nth-child(2) { display: none; }
+
+}
+
+}
 
 @media #{ $medium-up } {
 
-// Prevents scrolling of letter-grid background
-html, body { 
-	width: 100vw;
-	overflow-x: hidden;
+#landing {
+
+	// Hide filter bar in favor of default header
+	
+	filter-bar { display: none; }
+
+	section.inverted { color: white; }
+
+	#previews.inverted .preview-card:not(.active) { opacity: 0.65; }
+
 }
 
 };
