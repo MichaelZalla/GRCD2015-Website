@@ -27,7 +27,7 @@
 	overflow: hidden;
 	text-align: center;
 	border: 1px solid white;
-	@include background("/images/placeholder-white.svg", cover);
+	@include background("images/placeholder-white.svg", cover);
 }
 
 .placeholder { @extend %placeholder; }
@@ -54,7 +54,7 @@ div, section, header, nav, footer { overflow: auto; }
 .clear.divider:after {
 	visibility: visible;
 	height: 4px;
-	@include background("/images/divider.png", 66.66% 100%)
+	@include background("images/divider.png", 66.66% 100%)
 }
 
 /* Section layouts */
@@ -185,8 +185,7 @@ body {
 	& > footer  .content { max-width: $ss-mobile-content-max-width; }
 
 	& > header .content {
-		padding-left: 	$ss-mobile-header-side-padding;
-		padding-right: 	$ss-mobile-header-side-padding;
+		@include same(padding-left, padding-right, $ss-mobile-header-side-padding);
 	}
 
 	& > section .content {
@@ -196,8 +195,7 @@ body {
 
 	& > section .content,
 	& > footer  .content {
-		padding-left: 	$ss-mobile-content-side-padding;
-		padding-right: 	$ss-mobile-content-side-padding;
+		@include same(padding-left, padding-right, $ss-mobile-content-side-padding);
 	}
 
 	// Account for fixed page header
@@ -220,15 +218,13 @@ body {
 	& > footer  .content { max-width: $ss-desktop-content-max-width; }
 
 	& > header .content {
-		padding-left: 	$ss-desktop-header-side-padding;
-		padding-right: 	$ss-desktop-header-side-padding;
+		@include same(padding-left, padding-right, $ss-desktop-header-side-padding);
 	}
 
 	& > section .content {
 		margin-top: 	$ss-desktop-section-top-margin;
 		margin-bottom: 	$ss-desktop-section-bottom-margin;
-		padding-left: 	$ss-desktop-content-side-padding;
-		padding-right: 	$ss-desktop-content-side-padding;
+		@include same(padding-left, padding-right, $ss-desktop-content-side-padding);
 	}
 
 	// Account for fixed page header

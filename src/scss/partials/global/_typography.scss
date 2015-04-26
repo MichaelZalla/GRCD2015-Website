@@ -148,7 +148,7 @@ h1 { &, &:before, &:after {
 h1.highlight {
 	display: inline-block; // for highlight (background) rendering
 	padding: 3px 2px 0 14px;
-	@include background("../images/highlight-stroke-yellow_2x.png", 100% 66.67%, left top);
+	@include background("../images/branding/highlight-stroke-yellow_2x.png", 100% 66.67%, left top);
 }
 
 /* Secondary heading */
