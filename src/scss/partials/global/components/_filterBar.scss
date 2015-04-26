@@ -1,0 +1,87 @@
+$filter-bar-height: 58px;
+$content-height: $filter-bar-height - (8px * 2);
+
+$logo-height: 26px;
+$logo-width: 136px;
+
+filter-menu .filter-bar {
+
+	position: fixed;
+	top: 0;
+	z-index: 999;
+	
+	display: table;
+	float: left;
+	
+	width: 100%;
+	height: $filter-bar-height;
+
+	background-color: white;
+
+	@include vendorize(transition, top 0.35s ease-in-out);
+
+	.container,
+	.content { height: inherit; }
+
+	.container {
+		display: table-cell; 
+		vertical-align: middle;
+	}
+
+	.content {
+		
+		overflow: hidden;
+		margin: 0px auto;
+		
+		padding-top: 8px;
+		padding-bottom: 8px;
+		padding-left: 	$ss-mobile-content-side-padding;
+		padding-right: 	$ss-mobile-content-side-padding;
+
+	}
+
+	.left {
+		width: 136px;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.logo {
+		margin: 0 !important;
+		padding-bottom: 4px;
+		padding-left: 50vw;
+		height: $content-height;
+		background-position-y: ($content-height / 2) - ($logo-height / 2);
+		@include background("../images/branding/grcd-2015-title.png", $logo-width $logo-height, left center);
+	}
+
+	.filter-menu-toggle {
+		
+		margin-top: 0;
+		padding: 6px 36px 4px 14px;
+		min-width: 0;
+		height: $content-height;
+		
+		border-radius: 6px;
+		background-color: darken(white, 8%);
+		color: darken(white, 35%);
+
+		@include background("../images/icons/arrow-down-mobile.svg", auto 10px, right 12px top 17px);
+
+		@include vendorize("transition", opacity 0.18s ease-in-out);
+
+	}
+
+}
+
+filter-menu .filter-bar.hidden { top: -72px; }
+
+@media #{ $medium-up } {
+
+filter-menu .filter-bar {
+
+	display: none;
+
+}
+
+}

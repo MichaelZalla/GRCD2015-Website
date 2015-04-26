@@ -20,7 +20,7 @@ footer {
 		border: 2px solid rgba(black, $brandmark-opacity);
 		opacity: $brandmark-opacity;
 		@include same(width, height, 48px);
-		@include background("/images/logo-black.svg", 62%);
+		@include background("images/logo-black.svg", 62%);
 		@extend %grayscale;
 	}
 

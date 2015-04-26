@@ -1,0 +1,299 @@
+filter-menu .filter-menu {
+
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100vh;
+	z-index: 999;
+
+	background-color: white;
+	
+	.content {
+		
+		display: flex;
+  		flex-flow: column;
+
+		width: 100vw;
+		max-width: $ss-desktop-content-max-width;
+		height: 100vh;
+
+		@include same(margin-left, margin-right, auto !important);
+
+	}
+	
+	@include vendorize("transition", top 0.18s ease-in-out);
+
+	.close {
+		position: absolute;
+		opacity: 0.5;
+		cursor: pointer;
+		@include same(min-width, min-height, 14px);
+		@include background("../images/icons/close.svg");
+	}
+
+	.top {
+		position: relative;
+		overflow: visible;
+		margin-bottom: 18px;
+		width: 100%;
+	}
+	
+	.main {
+
+		flex: 2;
+		overflow: hidden;
+		position: relative;
+
+		.content-wrapper {
+
+			top: 0;
+			position: absolute;
+			overflow-y: auto;
+			background-color: white;
+			
+			@include same(width, height, 100%);
+			
+			&:not(.visible) { top: 100vh; }
+			@include vendorize(transition, top 0.5s ease-in-out);
+
+		}
+
+		.filter-groups .filter-group {
+
+			&:not(:first-child) { margin-top: 1.0rem; }
+
+			&.print .focus { background-color: $grcd-neon-pink; }
+			&.motion .focus { background-color: $grcd-neon-blue; }
+			&.interaction .focus { background-color: $grcd-neon-green; }
+
+			.focus {
+				margin-top: 0.5em;
+				padding: 3px 16px 0 3px;
+				text-transform: uppercase;
+			}
+
+			.filter {
+				
+				display: inline-block;
+				text-transform: capitalize;
+				cursor: pointer;
+				
+				@extend %copy;
+
+			}
+
+			.filter.focus-filter:before { content: "All "; }
+
+		}
+
+		.selected-filters .selected-filter {
+			
+			margin-top: 2.0em;
+
+			.value {
+				
+				position: relative;
+				margin-top: 4px;
+				margin-right: 14px;
+				padding: 3px 16px 0 3px;
+				
+				@include typeset(2.0rem, 0.45, 0.065em, "Brandon Grotesque", $font-weight-bold);
+				text-transform: uppercase;
+				
+				.close {
+					top: 1px;
+					right: -28px;
+					opacity: 1 !important;
+				}
+
+			}
+
+			&.print .value { background-color: $grcd-neon-pink; }
+			&.motion .value { background-color: $grcd-neon-blue; }
+			&.interaction .value { background-color: $grcd-neon-green; }
+
+		}
+
+		.projects {
+
+			margin-top: 32px;
+			padding-bottom: 4.5em;
+
+			.project {
+				.project-title { margin-top: 0; }
+				.project-students .label:first-child { margin-top: 0.15em; }
+			}
+
+		}
+
+	}
+
+}
+
+filter-menu:not(.expanded) .filter-menu { top: -100vh; }
+
+@media #{ $small-only } {
+
+filter-menu .filter-menu {
+
+	.content { @include same(padding-top, padding-left, padding-right,
+		$ss-mobile-content-side-padding); }
+
+	.top {
+		
+		text-align: center;
+		@include same(margin-left, margin-right, auto);
+		
+		.heading {
+			margin-top: 1px;
+			font-size: 1.84rem;
+		}
+
+		.close {
+			top: 2px;
+			right: 0;
+			@include same(width, height, 24px);
+		}
+
+	}
+
+	.main {
+
+		.filter-groups .filter-group {
+
+			.focus { @include typeset(1.5rem, 0.45, 0.065em, "Brandon Grotesque", $font-weight-bold); }
+
+			.filters {
+				margin-top: 8px;
+				margin-left: -8px;
+			}
+
+			.filter {
+				margin-top: 8px;
+				margin-left: 8px;
+				padding: 8px 12px 6px;
+				border-radius: 6px;
+				background-color: darken(white, 8%);
+			}
+
+		}
+
+		.projects .project {
+
+			@include same(padding-top, padding-bottom, 1.0em);
+
+			border-bottom: 1px solid #e6e6e6;
+
+			.project-title,
+			.project-students .label { font-size: 1.35rem; }
+
+		}
+
+	}
+
+}
+
+}
+
+@media #{ $medium-up } {
+
+filter-menu .filter-menu {
+
+	.content {
+		padding-top: 112px;
+		@include same(padding-left, padding-right, $ss-desktop-content-side-padding);
+	}
+
+	.close {
+		@include vendorize(transition, opacity 0.35s ease-in-out);
+		@include mouseout(opacity, 0.14);
+	}
+
+	.top {
+
+		.heading {
+			margin-top: 0;
+			font-size: 1.15rem;
+			opacity: 0.5;
+		}
+
+		.close {
+			top: 0;
+			right: 0;
+			@include same(width, height, 32px);
+		}
+
+	}
+
+	.main {
+
+		.filter-groups .filter-group {
+
+			padding-bottom: 64px;
+
+			.focus { @include typeset(2.0rem, 0.45, 0.065em, "Brandon Grotesque", $font-weight-bold); }
+
+			.filters {
+				margin-top: 16px;
+				height: 32px;
+			}
+
+			.filter {
+
+				margin-left: 36px;
+				border-bottom: 0px solid white;
+				@include vendorize(transition, border-width 0.18s ease-in-out);
+
+				&:first-child { margin-left: 4px; }
+
+				&.selected,
+				&:hover { border-width: 4px; }
+
+			}
+
+			&.print {
+				.filter.selected,
+				.filter:hover { border-color: $grcd-neon-pink; }
+			}
+
+			&.motion {
+				.filter.selected,
+				.filter:hover { border-color: $grcd-neon-blue; }
+			}
+
+			&.interaction {
+				.filter.selected,
+				.filter:hover { border-color: $grcd-neon-green; }
+			}
+
+		}
+
+		.projects {
+
+			display: -webkit-flex;
+			-webkit-flex-flow: row wrap;
+
+			display: flex;
+			flex-flow: row wrap;
+
+			.project {
+
+				margin-top: 2.0em;
+
+				cursor: pointer;
+
+				@include vendorize(flex, 0 1 33.33%);
+
+				.project-title,
+				.project-students .label { font-size: 1.15rem; }
+				
+			}
+
+		}
+		
+	}
+
+}
+
+}
